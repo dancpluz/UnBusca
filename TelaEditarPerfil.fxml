@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" fx:id="apnEditarPerfil" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19">
+   <children>
+      <ImageView fx:id="imgPerfil" fitHeight="82.0" fitWidth="82.0" layoutX="60.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../perfil-de-usuario.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnMudar" alignment="CENTER" layoutX="50.0" layoutY="146.0" mnemonicParsing="false" text="Mudar Imagem" />
+      <Button fx:id="btnVoltar" layoutX="50.0" layoutY="341.0" mnemonicParsing="false" text="&lt;-" />
+      <Button fx:id="btnSalvar" layoutX="117.0" layoutY="341.0" mnemonicParsing="false" text="Salvar Alterações" />
+      <TextField fx:id="txtNome" layoutX="201.0" layoutY="86.0" prefHeight="23.0" prefWidth="158.0" promptText="Nome" />
+      <TextField fx:id="txtUsername" layoutX="201.0" layoutY="235.0" prefHeight="23.0" prefWidth="158.0" promptText="Usuário" />
+      <TextField fx:id="txtSenha" editable="false" layoutX="201.0" layoutY="275.0" prefHeight="23.0" prefWidth="158.0" promptText="Senha" />
+      <Label fx:id="lblPessoal" layoutX="201.0" layoutY="42.0" text="Informação Pessoal">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCPF" layoutX="201.0" layoutY="127.0" prefHeight="23.0" prefWidth="158.0" promptText="CPF" />
+      <TextField fx:id="txtTelefone" layoutX="386.0" layoutY="86.0" prefHeight="23.0" prefWidth="158.0" promptText="Telefone" />
+      <TextField fx:id="txtData" layoutX="386.0" layoutY="127.0" prefHeight="23.0" prefWidth="158.0" promptText="Data de Nascimento" />
+      <Label fx:id="lblConta" layoutX="202.0" layoutY="191.0" text="Conta">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnMudarSenha" layoutX="452.0" layoutY="341.0" mnemonicParsing="false" text="Mudar Senha" />
+      <TextField fx:id="txtNovaSenha" layoutX="386.0" layoutY="235.0" prefHeight="23.0" prefWidth="158.0" promptText="Nova Senha" />
+      <TextField fx:id="txtConfirmarSenha" layoutX="386.0" layoutY="275.0" prefHeight="23.0" prefWidth="158.0" promptText="Confirmar Senha" />
+   </children>
+</AnchorPane>

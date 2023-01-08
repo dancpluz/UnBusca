@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="apnCadastro" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="btnCadastro" layoutX="335.0" layoutY="293.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="159.0" text="Cadastrar-se" textAlignment="CENTER" />
+      <TextField fx:id="txtNome" layoutX="313.0" layoutY="134.0" prefHeight="26.0" prefWidth="202.0" text="Nome" />
+      <TextField fx:id="txtUsername" layoutX="313.0" layoutY="170.0" prefHeight="26.0" prefWidth="201.0" text="Usuário" />
+      <TextField fx:id="txtSenha" layoutX="313.0" layoutY="204.0" prefHeight="26.0" prefWidth="201.0" text="Senha" />
+      <TextField fx:id="txtCpf" layoutX="313.0" layoutY="239.0" prefHeight="26.0" prefWidth="201.0" text="CPF" />
+      <Label fx:id="lblCriarConta" alignment="CENTER" layoutX="331.0" layoutY="65.0" prefHeight="54.0" prefWidth="166.0" text="Criar Conta" textAlignment="CENTER">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="retSide" arcHeight="5.0" arcWidth="5.0" height="408.0" layoutY="-8.0" stroke="BLACK" strokeType="INSIDE" width="231.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.15039999783039093" green="0.9399999976158142" blue="0.4891532361507416" opacity="0.8700000047683716" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.05192982405424118" green="0.7789473533630371" blue="0.5123742818832397" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label fx:id="lblBemVindo" alignment="CENTER" layoutX="26.0" layoutY="120.0" prefHeight="54.0" prefWidth="184.0" text="Já possui conta?" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCadastro1" alignment="CENTER" layoutX="35.0" layoutY="224.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="159.0" text="Log in" textAlignment="CENTER" />
+   </children>
+</AnchorPane>
