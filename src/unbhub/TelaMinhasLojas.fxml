@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="501.0" prefWidth="811.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="telas.FXMLController">
+   <children>
+      <Button fx:id="btnAddLoja" layoutX="13.0" layoutY="216.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="132.0" text="Adicionar loja" />
+      <Label layoutX="14.0" layoutY="14.0" text="UnB HUB">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgFotoUser" fitHeight="66.0" fitWidth="56.0" layoutX="14.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/download.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblNomeUser" layoutX="82.0" layoutY="96.0" text="Usuário" />
+      <Label layoutX="13.0" layoutY="150.0" text="Minhas lojas">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnVoltar" layoutX="16.0" layoutY="452.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="132.0" text="Voltar" />
+      <ScrollPane layoutX="224.0" layoutY="46.0" prefHeight="448.0" prefWidth="375.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+        </content>
+      </ScrollPane>
+      <Label layoutX="280.0" layoutY="18.0" text="Buscar:" />
+      <TextField fx:id="txtBuscar" layoutX="329.0" layoutY="14.0" />
+      <Pane layoutX="599.0" layoutY="46.0" prefHeight="448.0" prefWidth="200.0">
+         <children>
+            <ScrollPane layoutY="216.0" prefHeight="232.0" prefWidth="200.0" />
+            <Label fx:id="lblNomeLoja" layoutX="55.0" layoutY="1.0" prefHeight="27.0" prefWidth="86.0" text="Nome loja" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="5.0" layoutY="199.0" text="Avaliações mais recentes:" />
+            <Button fx:id="btnVisualizarLoja" layoutX="53.0" layoutY="37.0" mnemonicParsing="false" text="Visualizar Loja" />
+            <Label layoutX="31.0" layoutY="88.0" text="Avaliação media:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblNotaMedia" layoutX="91.0" layoutY="163.0" text="5.0" />
+            <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="33.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Star_icon_stylized.svg.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="112.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Star_icon_stylized.svg.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="86.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Star_icon_stylized.svg.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="59.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Star_icon_stylized.svg.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="141.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Star_icon_stylized.svg.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
