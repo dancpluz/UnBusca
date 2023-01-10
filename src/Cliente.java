@@ -4,17 +4,17 @@ import java.util.ArrayList;
 
 public class Cliente extends Usuario{
     
-    private ArrayList<avaliacao> avaliacoes = new ArrayList();
+    private ArrayList<Avaliacao> avaliacoes = new ArrayList();
     
     public Cliente(String nome, String senha, String username, int cpf, int id, int telefone) {
         super(nome, senha, username, cpf, id);
     }
     
     public void adicionarAvaliacao(int nota, String comentario) {
-        avaliacoes.add(new avaliacao(nota, comentario));
+        avaliacoes.add(new Avaliacao(nota, comentario));
     }
     
-    public ArrayList<avaliacao> getAvaliacoes() {
+    public ArrayList<Avaliacao> getAvaliacoes() {
         return avaliacoes;
     }
     

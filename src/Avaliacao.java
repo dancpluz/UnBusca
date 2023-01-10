@@ -8,7 +8,7 @@ package unbhub;
  *
  * @author Daniel
  */
-public class Avaliacao/* extends Cliente */ {
+public class Avaliacao {
     private int nota;
     private String comentario;
 

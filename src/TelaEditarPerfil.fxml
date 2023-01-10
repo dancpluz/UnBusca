@@ -8,12 +8,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" fx:id="apnEditarPerfil" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19">
+<AnchorPane id="AnchorPane" fx:id="apnEditarPerfil" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fx:id="imgPerfil" fitHeight="82.0" fitWidth="82.0" layoutX="60.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../perfil-de-usuario.png" />
+            <Image url="@img/perfil-de-usuario.png" />
          </image>
       </ImageView>
       <Button fx:id="btnMudar" alignment="CENTER" layoutX="50.0" layoutY="146.0" mnemonicParsing="false" text="Mudar Imagem" />

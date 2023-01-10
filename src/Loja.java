@@ -14,7 +14,7 @@ public class Loja {
     private int id_loja, horario_funcionamento, nota_media; 
     private String local, pop_up, rede_social, opcoes_pagamento; /* Criar classe para local e talvez opcoes de pagamento */
     
-   /* private ArrayList<Produto> lista_produtos; */
+    private ArrayList<Produto> lista_produtos;
     private ArrayList<Avaliacao> lista_avaliacoes;
 
     public Loja() {
@@ -87,13 +87,13 @@ public class Loja {
         this.opcoes_pagamento = opcoes_pagamento;
     }
 
-    /* public ArrayList<Produto> getLista_produtos() {
+    public ArrayList<Produto> getLista_produtos() {
         return lista_produtos;
     }
 
     public void setLista_produtos(ArrayList<Produto> lista_produtos) {
         this.lista_produtos = lista_produtos;
-    } */
+    }
 
     public ArrayList<Avaliacao> getLista_avaliacoes() {
         return lista_avaliacoes;

@@ -7,12 +7,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" fx:id="apnEntrada" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19">
+<AnchorPane id="AnchorPane" fx:id="apnEntrada" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fx:id="imgDono" fitHeight="117.0" fitWidth="107.0" layoutX="170.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../loja.png" />
+            <Image url="@img/loja.png" />
          </image>
       </ImageView>
       <Label fx:id="lblSelecione" alignment="CENTER" layoutX="156.0" layoutY="71.0" prefHeight="38.0" prefWidth="288.0" text="Selecione seu Tipo de Conta" wrapText="true">
@@ -27,7 +26,7 @@
       </Button>
       <ImageView fx:id="imgCliente" fitHeight="117.0" fitWidth="107.0" layoutX="309.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../perfil.png" />
+            <Image url="@img/perfil.png" />
          </image>
       </ImageView>
       <Label fx:id="lblDono" alignment="CENTER" layoutX="188.0" layoutY="233.0" prefHeight="38.0" prefWidth="71.0" text="Dono" wrapText="true">
@@ -40,5 +39,10 @@
             <Font size="17.0" />
          </font>
       </Label>
+      <ImageView fx:id="imgUnB" fitHeight="38.0" fitWidth="71.0" layoutX="37.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/Símbolo_da_UnB.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

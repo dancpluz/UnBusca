@@ -13,9 +13,9 @@ public class Dono extends Usuario{
         this.telefone = telefone;
         this.data_nascimento = data_nascimento;
     }
-    
+   /* 
     public void adicionarLoja(int id, String horario, String local, String pop_up, String rede_social, String opcoes_pagamento) {
-        lojas.add(new Loja(id, horario, local, pop_up, rede_social, opcoes_pagamento));
+        lojas.add(new Loja(id, horario_funcionamento, nota_media, local, pop_up, rede_social, opcoes_pagamento));
     }
     
     public ArrayList<Loja> getLojas() {
@@ -31,5 +31,5 @@ public class Dono extends Usuario{
         lojas.get(index).setPop_up(pop_up);
         lojas.get(index).setRede_social(rede_social);
         lojas.get(index).setOpcoes_pagamento(opcoes_pagamento);
-    }
+    }*/
 }
