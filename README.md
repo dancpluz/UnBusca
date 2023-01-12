@@ -36,4 +36,5 @@ avaliações
 
 ## Diagrama de Relacionamentos
 
-![DiagramaHUB3](https://user-images.githubusercontent.com/64702639/211952813-c42817c8-c058-47a9-a213-cfebfc48ee21.jpeg)
+![DiaHUB](https://user-images.githubusercontent.com/64702639/211954050-13451c5f-1425-41f7-a4cb-e128ec10db30.png)
+
