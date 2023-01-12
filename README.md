@@ -1,7 +1,7 @@
 # UnBHUB
-&emsp;Programa desenvolvido em Java por estudantes da Universidade de Brasília para a
-disciplina Técnicas de Programação 1, ministrada pela Professora Roberta Barbosa.
-Desenvolvida em Java, utilizando a plataforma JavaFX.
+&emsp;Programa desenvolvido por estudantes da Universidade de Brasília para a
+disciplina Técnicas de Programação 1 como trabalho final, ministrada pela Professora
+Roberta Barbosa. Desenvolvida em Java, utilizando a plataforma JavaFX.
 
 ## Problema
 &emsp;Dentro do ambiente universitário, percebe-se a presença de lanchonetes e
