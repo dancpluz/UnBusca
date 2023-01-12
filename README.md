@@ -13,7 +13,7 @@ vendedores acabam tendo menor visibilidade, menor alcance de clientes e,
 consequentemente, maior dificuldade para crescer seus negócios.
 
 ## Proposta
-A partir do problema descrito, surge a necessidade de algo para estreitar
+&emsp;A partir do problema descrito, surge a necessidade de algo para estreitar
 essa relação cliente-loja, por isso propõe-se o “UnB HUB”, como o nome indica, é
 um HUB, uma central que agrega vários produtos, serviços e lojas ao mesmo
 tempo. Será implementado uma plataforma de busca para facilitar quando o
