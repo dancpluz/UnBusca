@@ -12,6 +12,19 @@ de aulas dificulta a relação dos estudantes com o comércio local. Por esse fa
 vendedores acabam tendo menor visibilidade, menor alcance de clientes e,
 consequentemente, maior dificuldade para crescer seus negócios.
 
+## Proposta
+A partir do problema descrito, surge a necessidade de algo para estreitar
+essa relação cliente-loja, por isso propõe-se o “UnB HUB”, como o nome indica, é
+um HUB, uma central que agrega vários produtos, serviços e lojas ao mesmo
+tempo. Será implementado uma plataforma de busca para facilitar quando o
+estudante precisar de qualquer produto ou serviço. Dentro da plataforma será
+possível criar uma conta, criar lojas e produtos, haverá uma tela inicial que mostrará
+as lojas principais e um sistema de avaliações. Esse HUB trará muita visibilidade
+aos vendedores e praticidade para o cliente que deseja saber onde encontrar
+produtos e serviços dentro da universidade, além de saber qual loja oferece pelo
+menor preço ou melhor qualidade.
+
+
 ## Regras de Negócio
 &emsp;Nosso projeto se aplicará somente à Universidade de Brasília, pelo fato dos
 integrantes cursarem nela e o problema apresentado ser evidente no ambiente. As
