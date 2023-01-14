@@ -12,13 +12,13 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="apnCadastro" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" fx:id="apnCadastro" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleCadastro">
    <children>
       <Button fx:id="btnCadastro" layoutX="335.0" layoutY="293.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="159.0" text="Cadastrar-se" textAlignment="CENTER" />
-      <TextField fx:id="txtNome" layoutX="313.0" layoutY="134.0" prefHeight="26.0" prefWidth="202.0" text="Nome" />
-      <TextField fx:id="txtUsername" layoutX="313.0" layoutY="170.0" prefHeight="26.0" prefWidth="201.0" text="Usuário" />
-      <TextField fx:id="txtSenha" layoutX="313.0" layoutY="204.0" prefHeight="26.0" prefWidth="201.0" text="Senha" />
-      <TextField fx:id="txtCpf" layoutX="313.0" layoutY="239.0" prefHeight="26.0" prefWidth="201.0" text="CPF" />
+      <TextField fx:id="txtNome" layoutX="313.0" layoutY="134.0" prefHeight="26.0" prefWidth="202.0" promptText="Nome" />
+      <TextField fx:id="txtUsername" layoutX="313.0" layoutY="170.0" prefHeight="26.0" prefWidth="201.0" promptText="Usuário" />
+      <TextField fx:id="txtSenha" layoutX="313.0" layoutY="204.0" prefHeight="26.0" prefWidth="201.0" promptText="Senha" />
+      <TextField fx:id="txtCpf" layoutX="313.0" layoutY="239.0" prefHeight="26.0" prefWidth="201.0" promptText="CPF" />
       <Label fx:id="lblCriarConta" alignment="CENTER" layoutX="331.0" layoutY="65.0" prefHeight="54.0" prefWidth="166.0" text="Criar Conta" textAlignment="CENTER">
          <font>
             <Font size="31.0" />
@@ -48,9 +48,9 @@
          </font>
       </Label>
       <Button fx:id="btnCadastro1" alignment="CENTER" layoutX="35.0" layoutY="224.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="159.0" text="Log in" textAlignment="CENTER" />
-      <ImageView fx:id="UnB" fitHeight="30.0" fitWidth="61.0" layoutX="35.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgUnB" fitHeight="30.0" fitWidth="61.0" layoutX="35.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/Símbolo_da_UnB.png" />
+            <Image url="@../unbhub/img/Símbolo_da_UnB.png" />
          </image>
       </ImageView>
    </children>

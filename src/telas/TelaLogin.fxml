@@ -15,14 +15,14 @@
 <AnchorPane id="AnchorPane" fx:id="apnLogin" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button fx:id="btnLogin" layoutX="94.0" layoutY="281.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="159.0" text="Logar" textAlignment="CENTER" />
-      <TextField fx:id="txtUsername" layoutX="83.0" layoutY="170.0" prefHeight="26.0" prefWidth="201.0" text="Usuário" />
-      <TextField fx:id="txtSenha" layoutX="83.0" layoutY="204.0" prefHeight="26.0" prefWidth="201.0" text="Senha" />
+      <TextField fx:id="txtUsername" layoutX="83.0" layoutY="170.0" prefHeight="26.0" prefWidth="201.0" promptText="Usuário" />
+      <TextField fx:id="txtSenha" layoutX="83.0" layoutY="204.0" prefHeight="26.0" prefWidth="201.0" promptText="Senha" />
       <Label fx:id="lblEntrar" alignment="CENTER" layoutX="40.0" layoutY="89.0" prefHeight="54.0" prefWidth="288.0" text="Entrar no UnBHUB" textAlignment="CENTER">
          <font>
             <Font size="31.0" />
          </font>
       </Label>
-      <Rectangle fx:id="retSide" arcHeight="5.0" arcWidth="5.0" height="408.0" layoutX="369.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="231.0">
+      <Rectangle fx:id="retSide" arcHeight="5.0" arcWidth="5.0" height="408.0" layoutX="369.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="231.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0" startX="1.0">
                <stops>
@@ -48,7 +48,7 @@
       <Button fx:id="btnCadastro" alignment="CENTER" layoutX="402.0" layoutY="221.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="159.0" text="Cadastrar-se" textAlignment="CENTER" />
       <ImageView fitHeight="30.0" fitWidth="55.0" layoutX="28.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/Símbolo_da_UnB.png" />
+            <Image url="@../img/Símbolo_da_UnB.png" />
          </image>
       </ImageView>
    </children>
