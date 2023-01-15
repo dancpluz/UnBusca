@@ -1,3 +1,4 @@
+/*  Fontes: */
 @font-face {
     font-family: 'Montserrat Regular';
     src: url('/fontes/Montserrat-Regular.ttf');
@@ -13,18 +14,65 @@
     src: url('/fontes/Montserrat-SemiBold.ttf');
 }
 
-.buttonDark{
+/*  Cores da Identidade visual: */
+*{
+    branco: #F7F7FF;
+    azul-escuro: #004E64;
+    verde: #7AE582;
+    azul: #00A5CF;
+    verde-piscina: #9FFFCB;
+    ciano: #25A18E;
+}
+
+.label {
+    -fx-font-family: "Montserrat Bold";
+}
+
+.text-field {
+    -fx-font-family: "Montserrat Regular";
+    -fx-accent: branco;
+    -fx-background-color: verde, branco;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-background-radius: 0;
+    -fx-prompt-text-fill: #25A18E;
+}
+.text-field:focused {
+    -fx-highlight-fill: azul-escuro;
+    -fx-prompt-text-fill: transparent;
+}
+
+.buttonDark {
     -fx-font-family: "Montserrat SemiBold";
     -fx-background-color: transparent;
-    -fx-border-color:  #7AE582;
+    -fx-font-size: 10;
+    -fx-border-color:  verde;
+    -fx-border-width:  2;
     -fx-border-radius:  100;
-    -fx-border-width:  2.5;
 }
 
-.buttonLight{
-    -fx-background-color: #F7F7FF;
+.buttonDark:hover {
+    -fx-background-color: verde;
+    -fx-background-radius:  100;
 }
 
-.label{
-    -fx-font-family: "Montserrat Bold";
+.buttonDark:pressed {
+    -fx-opacity: 0.5
+}
+
+.buttonLight {
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-background-color: transparent;
+    -fx-font-size: 10;
+    -fx-border-color:  verde;
+    -fx-border-radius:  100;
+    -fx-border-width:  2;
+}
+
+.buttonLight:hover {
+    -fx-background-color: verde;
+    -fx-background-radius:  100;
+}
+
+.buttonLight:pressed {
+    -fx-opacity: 0.5
 }
