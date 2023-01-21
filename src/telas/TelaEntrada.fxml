@@ -7,41 +7,42 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="apnEntrada" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="360.0" prefWidth="640.0" style="-fx-background-color: #004E64;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleMenu">
    <children>
-      <ImageView fx:id="imgDono" fitHeight="117.0" fitWidth="107.0" layoutX="170.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="117.0" fitWidth="107.0" layoutX="169.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/loja.png" />
+            <Image url="@../imagens/loja.png" />
          </image>
       </ImageView>
-      <Label fx:id="lblSelecione" alignment="CENTER" layoutX="156.0" layoutY="71.0" prefHeight="38.0" prefWidth="288.0" text="Selecione seu Tipo de Conta" wrapText="true">
+      <Label alignment="CENTER" layoutX="129.0" layoutY="45.0" prefHeight="66.0" prefWidth="358.0" text="Selecione seu Tipo de Conta" textAlignment="CENTER" textFill="#f7f7ff" wrapText="true">
          <font>
-            <Font size="21.0" />
+            <Font size="24.0" />
          </font>
       </Label>
-      <Button fx:id="btnEntrar" layoutX="230.0" layoutY="295.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="140.0" text="Entrar">
+      <Button fx:id="btnEntrar" layoutX="250.0" layoutY="281.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="140.0" styleClass="buttonDark" text="ENTRAR">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <ImageView fx:id="imgCliente" fitHeight="117.0" fitWidth="107.0" layoutX="309.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="117.0" fitWidth="107.0" layoutX="336.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/perfil.png" />
+            <Image url="@../imagens/perfil.png" />
          </image>
       </ImageView>
-      <Label fx:id="lblDono" alignment="CENTER" layoutX="188.0" layoutY="233.0" prefHeight="38.0" prefWidth="71.0" text="Dono" wrapText="true">
+      <Label alignment="CENTER" layoutX="187.0" layoutY="224.0" prefHeight="38.0" prefWidth="71.0" text="Dono" textFill="#f7f7ff" wrapText="true">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
-      <Label fx:id="lblCliente" alignment="CENTER" layoutX="327.0" layoutY="233.0" prefHeight="38.0" prefWidth="71.0" text="Cliente" wrapText="true">
+      <Label alignment="CENTER" layoutX="363.0" layoutY="224.0" prefHeight="38.0" prefWidth="71.0" text="Cliente" textFill="#f7f7ff" wrapText="true">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
-      <ImageView fx:id="imgUnB" fitHeight="38.0" fitWidth="71.0" layoutX="37.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+      <Button fx:id="btnSair" alignment="CENTER" layoutX="572.0" layoutY="20.0" mnemonicParsing="false" onAction="#close" prefHeight="40.0" prefWidth="53.0" styleClass="buttonX" text="X" textFill="#7ae582" />
+      <ImageView fitHeight="30.0" fitWidth="150.0" layoutX="10.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/Símbolo_da_UnB.png" />
+            <Image url="@../imagens/LogoBigDark.png" />
          </image>
       </ImageView>
    </children>

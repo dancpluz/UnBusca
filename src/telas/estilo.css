@@ -45,6 +45,7 @@
     -fx-font-family: "Montserrat SemiBold";
     -fx-background-color: transparent;
     -fx-font-size: 10;
+    -fx-text-fill: branco;
     -fx-border-color:  verde;
     -fx-border-width:  2;
     -fx-border-radius:  100;
@@ -52,27 +53,38 @@
 
 .buttonDark:hover {
     -fx-background-color: verde;
-    -fx-background-radius:  100;
+    -fx-background-radius: 100;
 }
 
 .buttonDark:pressed {
-    -fx-opacity: 0.5
+    -fx-background-color: derive(verde,40%);
+    -fx-border-color: derive(verde,40%);
+    -fx-background-radius: 100;
 }
 
 .buttonLight {
     -fx-font-family: "Montserrat SemiBold";
     -fx-background-color: transparent;
     -fx-font-size: 10;
-    -fx-border-color:  verde;
-    -fx-border-radius:  100;
-    -fx-border-width:  2;
+    -fx-text-fill: azul-escuro;
+    -fx-border-color: verde;
+    -fx-border-radius: 100;
+    -fx-border-width: 2;
 }
 
 .buttonLight:hover {
     -fx-background-color: verde;
-    -fx-background-radius:  100;
+    -fx-background-radius: 100;
 }
 
 .buttonLight:pressed {
-    -fx-opacity: 0.5
+    -fx-background-color: derive(verde,-20%);
+    -fx-border-color: derive(verde,-20%);
+    -fx-background-radius:  100;
+}
+
+.buttonX{
+    -fx-font-family: "Montserrat Bold";
+    -fx-background-color: transparent;
+    -fx-font-size: 24;
 }

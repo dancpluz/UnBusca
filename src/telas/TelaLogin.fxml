@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="apnLogin" prefHeight="360.0" prefWidth="640.0" style="-fx-background-color: #004E64;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="360.0" prefWidth="640.0" style="-fx-background-color: #004E64;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleMenu">
    <children>
       <Button fx:id="btnLogin" layoutX="119.0" layoutY="259.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" styleClass="buttonDark" text="ENTRAR" textAlignment="CENTER" textFill="#f7f7ff">
          <font>
@@ -17,7 +17,7 @@
          </font></Button>
       <TextField fx:id="txtUsername" layoutX="99.0" layoutY="167.0" prefHeight="26.0" prefWidth="201.0" promptText="Usuário" />
       <TextField fx:id="txtSenha" layoutX="99.0" layoutY="201.0" prefHeight="26.0" prefWidth="201.0" promptText="Senha" />
-      <Label fx:id="lblEntrar" alignment="CENTER" layoutY="77.0" prefHeight="54.0" prefWidth="400.0" text="Entrar no UnBusca" textAlignment="CENTER" textFill="#7be382">
+      <Label alignment="CENTER" layoutY="77.0" prefHeight="54.0" prefWidth="400.0" text="Entrar no UnBusca" textAlignment="CENTER" textFill="#7be382">
          <font>
             <Font size="31.0" />
          </font>
@@ -27,18 +27,19 @@
             <Image url="@../imagens/LogoBigDark.png" />
          </image>
       </ImageView>
-      <Pane fx:id="pnSide" layoutX="400.0" prefHeight="360.0" prefWidth="240.0" style="-fx-background-color: F7F7FF;">
+      <Pane layoutX="400.0" prefHeight="360.0" prefWidth="240.0" style="-fx-background-color: F7F7FF;">
          <children>
-            <Button fx:id="btnCadastro" alignment="CENTER" layoutX="40.0" layoutY="201.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" styleClass="buttonLight" text="CADASTRAR-SE" textAlignment="CENTER" textFill="#004e64">
+            <Button fx:id="btnCadastro" alignment="CENTER" layoutX="40.0" layoutY="201.0" mnemonicParsing="false" onAction="#trocarCenaCadastro" prefHeight="40.0" prefWidth="160.0" styleClass="buttonLight" text="CADASTRAR-SE" textAlignment="CENTER" textFill="#004e64">
                <font>
                   <Font size="10.0" />
                </font>
             </Button>
-            <Label fx:id="lblCadastre" alignment="CENTER" layoutX="28.0" layoutY="106.0" prefHeight="54.0" prefWidth="184.0" text="Cadastre-se" textAlignment="CENTER" textFill="#004e64" textOverrun="CLIP" wrapText="true">
+            <Label alignment="CENTER" layoutX="28.0" layoutY="106.0" prefHeight="54.0" prefWidth="184.0" text="Cadastre-se" textAlignment="CENTER" textFill="#004e64" textOverrun="CLIP" wrapText="true">
                <font>
                   <Font size="25.0" />
                </font>
             </Label>
+            <Button fx:id="btnSair" alignment="CENTER" layoutX="174.0" layoutY="14.0" mnemonicParsing="false" onAction="#close" prefHeight="40.0" prefWidth="53.0" styleClass="buttonX" text="X" textFill="#7ae582" />
          </children>
       </Pane>
    </children>

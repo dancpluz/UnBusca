@@ -33,6 +33,7 @@ public class Principal extends Application {
             primaryStage.setY(mouseEvent.getScreenY() - y);
         });
         
+        // Não redimensionável
         primaryStage.setResizable(false);
         // Título da janela
         primaryStage.setTitle("UnBusca");
@@ -43,7 +44,7 @@ public class Principal extends Application {
         // Mostrar cena
         primaryStage.show(); 
     }
-
+    
     public static void main(String[] args) {
         launch(args);
     }

@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="apnCadastro" prefHeight="360.0" prefWidth="640.0" style="-fx-background-color: #004E64;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleCadastro">
+<AnchorPane prefHeight="360.0" prefWidth="640.0" style="-fx-background-color: #004E64;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleMenu">
    <children>
-      <Button fx:id="btnCadastro" layoutX="354.0" layoutY="278.0" prefHeight="40.0" prefWidth="160.0" styleClass="buttonDark" text="CADASTRAR-SE" textAlignment="CENTER" textFill="#f7f7ff">
+      <Button fx:id="btnCadastro" layoutX="354.0" layoutY="278.0" onAction="#entrarCadastro" prefHeight="40.0" prefWidth="160.0" styleClass="buttonDark" text="CADASTRAR-SE" textAlignment="CENTER" textFill="#f7f7ff">
          <font>
             <Font size="10.0" />
          </font></Button>
@@ -19,28 +19,29 @@
       <TextField fx:id="txtUsername" layoutX="342.0" layoutY="155.0" prefHeight="26.0" prefWidth="201.0" promptText="Usuário" />
       <TextField fx:id="txtSenha" layoutX="342.0" layoutY="189.0" prefHeight="26.0" prefWidth="201.0" promptText="Senha" />
       <TextField fx:id="txtCpf" layoutX="342.0" layoutY="224.0" prefHeight="26.0" prefWidth="201.0" promptText="CPF" />
-      <Label fx:id="lblCriarConta" alignment="CENTER" layoutX="325.0" layoutY="52.0" prefHeight="54.0" prefWidth="234.0" text="Criar Conta" textAlignment="CENTER" textFill="#7ae582">
+      <Label alignment="CENTER" layoutX="325.0" layoutY="52.0" prefHeight="54.0" prefWidth="234.0" text="Criar Conta" textAlignment="CENTER" textFill="#7ae582">
          <font>
             <Font name="SansSerif Bold" size="31.0" />
          </font>
       </Label>
-      <Pane fx:id="pnSide" prefHeight="360.0" prefWidth="240.0" style="-fx-background-color: F7F7FF;">
+      <Pane prefHeight="360.0" prefWidth="240.0" style="-fx-background-color: F7F7FF;">
          <children>
-            <Button fx:id="btnEntrar" alignment="CENTER" layoutX="40.0" layoutY="212.0" prefHeight="40.0" prefWidth="160.0" styleClass="buttonLight" text="ENTRAR" textFill="#004e64">
+            <Button fx:id="btnEntrar" alignment="CENTER" layoutX="40.0" layoutY="212.0" onAction="#trocarCenaLogin" prefHeight="40.0" prefWidth="160.0" styleClass="buttonLight" text="ENTRAR" textFill="#004e64">
                <font>
                   <Font size="10.0" />
                </font></Button>
-            <Label fx:id="lblBemVindo" alignment="CENTER" layoutX="28.0" layoutY="95.0" prefHeight="85.0" prefWidth="184.0" text="Já possui conta?" textAlignment="CENTER" textFill="#004e64" textOverrun="CLIP" wrapText="true">
+            <Label alignment="CENTER" layoutX="28.0" layoutY="95.0" prefHeight="85.0" prefWidth="184.0" text="Já possui conta?" textAlignment="CENTER" textFill="#004e64" textOverrun="CLIP" wrapText="true">
                <font>
                   <Font name="SansSerif Bold" size="22.0" />
                </font>
             </Label>
-            <ImageView fx:id="imgLogo" fitHeight="30.0" fitWidth="150.0" layoutX="10.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="30.0" fitWidth="150.0" layoutX="10.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagens/LogoBigLight.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
+      <Button fx:id="btnSair" alignment="CENTER" layoutX="572.0" layoutY="14.0" mnemonicParsing="false" onAction="#close" prefHeight="40.0" prefWidth="53.0" styleClass="buttonX" text="X" textFill="#7ae582" />
    </children>
 </AnchorPane>
