@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="360.0" prefWidth="640.0" style="-fx-background-color: #004E64;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleMenu">
    <children>
-      <Button fx:id="btnLogin" layoutX="119.0" layoutY="259.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" styleClass="buttonDark" text="ENTRAR" textAlignment="CENTER" textFill="#f7f7ff">
+      <Button fx:id="btnLogin" layoutX="119.0" layoutY="259.0" mnemonicParsing="false" onAction="#realizarLogin" prefHeight="40.0" prefWidth="160.0" styleClass="buttonDark" text="ENTRAR" textAlignment="CENTER" textFill="#f7f7ff">
          <font>
             <Font size="10.0" />
          </font></Button>
@@ -42,5 +42,6 @@
             <Button fx:id="btnSair" alignment="CENTER" layoutX="174.0" layoutY="14.0" mnemonicParsing="false" onAction="#close" prefHeight="40.0" prefWidth="53.0" styleClass="buttonX" text="X" textFill="#7ae582" />
          </children>
       </Pane>
+      <Label fx:id="lblErro" layoutX="99.0" layoutY="227.0" textFill="RED" />
    </children>
 </AnchorPane>
