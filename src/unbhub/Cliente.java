@@ -6,7 +6,7 @@ public class Cliente extends Usuario{
     
     private ArrayList<Avaliacao> avaliacoes = new ArrayList();
     
-    public Cliente(String nome, String senha, String username, int cpf, int id, int telefone) {
+    public Cliente(String nome, String senha, String username, int cpf, int id) {
         super(nome, senha, username, cpf, id);
     }
     
