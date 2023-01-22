@@ -7,10 +7,14 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import java.util.ArrayList;
 
 
 public class Principal extends Application {
     double x=0,y=0;
+    public static ArrayList<Usuario> usuarios = new ArrayList<>();
+    public static int cIds = 1;
+    
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/telas/TelaLogin.fxml"));
