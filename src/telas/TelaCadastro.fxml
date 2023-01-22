@@ -43,5 +43,6 @@
          </children>
       </Pane>
       <Button fx:id="btnSair" alignment="CENTER" layoutX="572.0" layoutY="14.0" mnemonicParsing="false" onAction="#close" prefHeight="40.0" prefWidth="53.0" styleClass="buttonX" text="X" textFill="#7ae582" />
+      <Label fx:id="lblErro" layoutX="340.0" layoutY="250.0" textFill="RED" />
    </children>
 </AnchorPane>
