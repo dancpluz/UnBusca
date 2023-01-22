@@ -1,3 +1,25 @@
+> ### Frontend
+- [X] Tela de Cadastro
+- [X] Tela de Login
+- [ ] Tela de Entrada
+- [ ] Tela de Cliente
+- [ ] Tela de Dono
+- [ ] Tela da Loja
+- [ ] Tela de Criar/Editar Lojas
+- [ ] Tela de Editar Perfil
+
+> ### Backend
+- [X] Criação de usuário
+- [X] Verificação de usuário
+- [ ] Formatação dos campos de entrada
+- [ ] Criação de perfil de dono
+- [ ] Editar perfil
+- [ ] Banco de dados
+- [ ] Criação de lojas
+- [ ] Criação de avaliações
+- [ ] Mecanismo de busca
+
+
 # UnBHUB
 &emsp;Programa desenvolvido por estudantes da Universidade de Brasília para a
 disciplina Técnicas de Programação 1 como trabalho final, ministrada pela Professora
