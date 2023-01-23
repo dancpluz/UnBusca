@@ -1,6 +1,7 @@
 > ### Frontend
 - [X] Tela de Cadastro
 - [X] Tela de Login
+- [ ] AwesomeFontFX
 - [ ] Tela de Entrada
 - [ ] Tela de Cliente
 - [ ] Tela de Dono
