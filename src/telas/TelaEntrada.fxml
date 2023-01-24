@@ -9,32 +9,32 @@
 
 <AnchorPane id="AnchorPane" prefHeight="360.0" prefWidth="640.0" style="-fx-background-color: #004E64;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleMenu">
    <children>
-      <ImageView fitHeight="117.0" fitWidth="107.0" layoutX="169.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="117.0" fitWidth="107.0" layoutX="197.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagens/loja.png" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" layoutX="129.0" layoutY="45.0" prefHeight="66.0" prefWidth="358.0" text="Selecione seu Tipo de Conta" textAlignment="CENTER" textFill="#f7f7ff" wrapText="true">
+      <Label alignment="CENTER" layoutX="141.0" layoutY="45.0" prefHeight="66.0" prefWidth="358.0" text="Selecione seu Tipo de Conta" textAlignment="CENTER" textFill="#f7f7ff" wrapText="true">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Button fx:id="btnEntrar" layoutX="250.0" layoutY="281.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="140.0" styleClass="buttonDark" text="ENTRAR">
+      <Button fx:id="btnEntrar" layoutX="250.0" layoutY="279.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="140.0" styleClass="buttonDark" text="ENTRAR">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <ImageView fitHeight="117.0" fitWidth="107.0" layoutX="336.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="117.0" fitWidth="107.0" layoutX="337.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagens/perfil.png" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" layoutX="187.0" layoutY="224.0" prefHeight="38.0" prefWidth="71.0" text="Dono" textFill="#f7f7ff" wrapText="true">
+      <Label alignment="CENTER" layoutX="214.0" layoutY="224.0" prefHeight="38.0" prefWidth="71.0" text="Dono" textFill="#f7f7ff" wrapText="true">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="363.0" layoutY="224.0" prefHeight="38.0" prefWidth="71.0" text="Cliente" textFill="#f7f7ff" wrapText="true">
+      <Label alignment="CENTER" layoutX="354.0" layoutY="224.0" prefHeight="38.0" prefWidth="71.0" text="Cliente" textFill="#f7f7ff" wrapText="true">
          <font>
             <Font size="17.0" />
          </font>

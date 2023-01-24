@@ -34,6 +34,12 @@ public class ControleMenu implements Initializable {
 
     double x=0,y=0;
     
+    // Fecha a janela
+    public void close() {
+        Stage stage = (Stage) btnSair.getScene().getWindow();
+        stage.close();
+    }
+    
     // Troca a tela de Cadastro pela tela de Login
     public void trocarCenaLogin(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("/telas/TelaLogin.fxml"));
@@ -117,11 +123,11 @@ public class ControleMenu implements Initializable {
             case 1:
                 //caso username ja exista:
                 lblErro.setTextFill(Color.color(1,0,0));
-                lblErro.setText("Nome de Usuário ja existe");
+                lblErro.setText("Nome de Usuário já existe");
                 break;
             case 0:
                 lblErro.setTextFill(Color.color(0,1,0));
-                lblErro.setText("Usuário cadastrado com sucesso");
+                lblErro.setText("Usuário Cadastrado com sucesso");
                 txtNome.setText("");
                 txtSenha.setText("");
                 txtCpf.setText("");
@@ -161,11 +167,27 @@ public class ControleMenu implements Initializable {
         
     }
     
-    
-    // Fecha a janela
-    public void close() {
-        Stage stage = (Stage) btnSair.getScene().getWindow();
-        stage.close();
+    public void contaDono(ActionEvent event) throws IOException {
+        boolean dono = false;
+        // ** se a conta não tiver telefone e de nascimento cadastrada
+        if (!dono) {
+            root = FXMLLoader.load(getClass().getResource("/telas/TelaCompletarCadastro.fxml"));
+        } else {
+            root = FXMLLoader.load(getClass().getResource("/telas/TelaDono.fxml"));
+        }
+        
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+
+        // Aplicar estilo css na cena
+        String css = this.getClass().getResource("/telas/estilo.css").toExternalForm();
+        scene.getStylesheets().add(css);
+
+        telaArrastavel(root,stage);
+
+        stage.setScene(scene);
+        stage.show();
+        
     }
     
     @Override
