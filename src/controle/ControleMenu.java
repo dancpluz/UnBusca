@@ -187,7 +187,21 @@ public class ControleMenu implements Initializable {
 
         stage.setScene(scene);
         stage.show();
-        
+    }
+    
+    public void contaCliente(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("/telas/TelaCliente.fxml"));       
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+
+        // Aplicar estilo css na cena
+        String css = this.getClass().getResource("/telas/estilo.css").toExternalForm();
+        scene.getStylesheets().add(css);
+
+        telaArrastavel(root,stage);
+
+        stage.setScene(scene);
+        stage.show();
     }
     
     @Override
