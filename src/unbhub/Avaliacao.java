@@ -9,15 +9,17 @@ package unbhub;
  * @author Daniel
  */
 public class Avaliacao {
-    private int nota;
+    private int nota, idUsuario, idLoja;
     private String comentario;
 
     public Avaliacao() {
     }
 
-    public Avaliacao(int nota, String comentario) {
+    public Avaliacao(int nota, String comentario, int idU, int idL) {
         this.nota = nota;
         this.comentario = comentario;
+        idUsuario = idU;
+        idLoja = idL;
     }
     
     public int getNota() {
@@ -36,5 +38,11 @@ public class Avaliacao {
         this.comentario = comentario;
     }
     
+    public int getIdUsuario() {
+        return idUsuario;
+    }
     
+    public int getIdLoja() {
+        return idLoja;
+    }
 }

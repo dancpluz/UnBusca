@@ -16,8 +16,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import unbhub.Principal;
-import unbhub.Cliente;
+//import unbhub.Cliente;
 import unbhub.Usuario;
+import java.util.Map;
+
 
 
 public class ControleMenu implements Initializable {
@@ -25,20 +27,15 @@ public class ControleMenu implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    double x=0,y=0;
+    
     @FXML
-    private Button btnSair,btnCadastro;
+    private Button btnSair;
     @FXML
     private TextField txtNome, txtUsername, txtSenha, txtCpf;
     @FXML
     private Label lblErro;
 
-    double x=0,y=0;
-    
-    // Fecha a janela
-    public void close() {
-        Stage stage = (Stage) btnSair.getScene().getWindow();
-        stage.close();
-    }
     
     // Troca a tela de Cadastro pela tela de Login
     public void trocarCenaLogin(ActionEvent event) throws IOException {
@@ -99,14 +96,14 @@ public class ControleMenu implements Initializable {
         }
         
         // Checa se nome de usuario ja existe
-        for (Usuario user : Principal.usuarios) {
-            if (user.getUsername().equals(username)) {
+        for (Map.Entry<Integer, Usuario> i : Principal.usuarios.entrySet()) {
+            if (i.getValue().getUsername().equals(username)) {
                 return 1;
-            }    
+            }   
         }
         
-        Principal.usuarios.add(new Cliente(txtNome.getText(), txtSenha.getText(), txtUsername.getText(), Integer.parseInt(txtCpf.getText()), Principal.cIds));
-        Principal.cIds += 1;
+        Principal.usuarios.put(Principal.cIdUsuarios, new Usuario(txtNome.getText(), txtSenha.getText(), txtUsername.getText(), txtCpf.getText(), Principal.cIdUsuarios));
+        Principal.cIdUsuarios += 1;
         return 0;
     }
     
@@ -123,11 +120,11 @@ public class ControleMenu implements Initializable {
             case 1:
                 //caso username ja exista:
                 lblErro.setTextFill(Color.color(1,0,0));
-                lblErro.setText("Nome de Usuário já existe");
+                lblErro.setText("Nome de Usuário ja existe");
                 break;
             case 0:
                 lblErro.setTextFill(Color.color(0,1,0));
-                lblErro.setText("Usuário Cadastrado com sucesso");
+                lblErro.setText("Usuário cadastrado com sucesso");
                 txtNome.setText("");
                 txtSenha.setText("");
                 txtCpf.setText("");
@@ -140,9 +137,16 @@ public class ControleMenu implements Initializable {
     // Confere nome e senha e então realiza o login
     public void realizarLogin(ActionEvent event) throws IOException {
         String user = txtUsername.getText(), senha = txtSenha.getText();
-        for (Usuario u : Principal.usuarios) {
+        boolean notFound = true;
+        for (Map.Entry<Integer, Usuario> i : Principal.usuarios.entrySet()) {
+            Usuario u = i.getValue();
             if (u.getUsername().equals(user)) {
+                notFound = false;
                 if (u.checkSenha(senha)) {
+                    //Usuario e senha corretos:
+                    
+                    Principal.usuarioLogado = u;
+                  
                     root = FXMLLoader.load(getClass().getResource("/telas/TelaEntrada.fxml"));
                     stage = (Stage)((Node)event.getSource()).getScene().getWindow();
                     scene = new Scene(root);
@@ -163,45 +167,16 @@ public class ControleMenu implements Initializable {
             }
         }
         // Usuario não existe:
-        lblErro.setText("Usuário não encontrado");
-        
-    }
-    
-    public void contaDono(ActionEvent event) throws IOException {
-        boolean dono = false;
-        // ** se a conta não tiver telefone e de nascimento cadastrada
-        if (!dono) {
-            root = FXMLLoader.load(getClass().getResource("/telas/TelaCompletarCadastro.fxml"));
-        } else {
-            root = FXMLLoader.load(getClass().getResource("/telas/TelaDono.fxml"));
+        if(notFound) {
+        lblErro.setText("Usuário não encontrado");   
         }
-        
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-
-        // Aplicar estilo css na cena
-        String css = this.getClass().getResource("/telas/estilo.css").toExternalForm();
-        scene.getStylesheets().add(css);
-
-        telaArrastavel(root,stage);
-
-        stage.setScene(scene);
-        stage.show();
     }
     
-    public void contaCliente(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("/telas/TelaCliente.fxml"));       
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-
-        // Aplicar estilo css na cena
-        String css = this.getClass().getResource("/telas/estilo.css").toExternalForm();
-        scene.getStylesheets().add(css);
-
-        telaArrastavel(root,stage);
-
-        stage.setScene(scene);
-        stage.show();
+    
+    // Fecha a janela
+    public void close() {
+        Stage stage = (Stage) btnSair.getScene().getWindow();
+        stage.close();
     }
     
     @Override

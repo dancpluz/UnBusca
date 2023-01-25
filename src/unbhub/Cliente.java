@@ -1,3 +1,4 @@
+/*
 package unbhub;
 
 import java.util.ArrayList;
@@ -27,3 +28,4 @@ public class Cliente extends Usuario{
         avaliacoes.get(index).setComentario(comentario);
     }
 }
+*/

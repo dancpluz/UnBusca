@@ -8,12 +8,16 @@ public class Dono extends Usuario{
     private String telefone, data_nascimento;
     
     
-    public Dono(String nome, String senha, String username, int cpf, int id, String telefone, String data_nascimento) {
+    public Dono(String nome, String senha, String username, String cpf, int id, String telefone, String data_nascimento) {
         super(nome, senha, username, cpf, id);
         this.telefone = telefone;
         this.data_nascimento = data_nascimento;
     }
-   /* 
+
+    
+    
+    
+    /* 
     public void adicionarLoja(int id, String horario, String local, String pop_up, String rede_social, String opcoes_pagamento) {
         lojas.add(new Loja(id, horario_funcionamento, nota_media, local, pop_up, rede_social, opcoes_pagamento));
     }
