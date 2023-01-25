@@ -1,13 +1,15 @@
 > ### Frontend
 - [X] Tela de Cadastro
 - [X] Tela de Login
-- [ ] AwesomeFontFX
-- [ ] Tela de Entrada
+- [ ] Tela de Entrada // Daniel
+- [X] Tela de CompletarCadastro
 - [ ] Tela de Cliente
 - [ ] Tela de Dono
 - [ ] Tela da Loja
 - [ ] Tela de Criar/Editar Lojas
 - [ ] Tela de Editar Perfil
+- [ ] FontAwesomeFX
+- [ ] ControlsFX
 
 > ### Backend
 - [X] Criação de usuário
