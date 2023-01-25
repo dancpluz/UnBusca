@@ -1,26 +1,26 @@
 > ### Frontend
-- [ ] - [X] Tela de Cadastro
-- [ ] - [X] Tela de Login
-- [ ] - [ ] Tela de Entrada // Daniel
-- [ ] - [X] Tela de CompletarCadastro
-- [ ] - [ ] Tela de Cliente
-- [ ] - [ ] Tela de Dono
-- [ ] - [ ] Tela da Loja
-- [ ] - [ ] Tela de Criar/Editar Lojas
-- [ ] - [ ] Tela de Editar Perfil
-- [ ] - [ ] FontAwesomeFX
-- [ ] - [ ] ControlsFX
+- [X] Tela de Cadastro
+- [X] Tela de Login
+- [ ] Tela de Entrada // Daniel
+- [X] Tela de CompletarCadastro
+- [ ] Tela de Cliente
+- [ ] Tela de Dono
+- [ ] Tela da Loja
+- [ ] Tela de Criar/Editar Lojas
+- [ ] Tela de Editar Perfil
+- [ ] FontAwesomeFX
+- [ ] ControlsFX
 
 > ### Backend
-- [ ] - [X] Criação de usuário
-- [ ] - [X] Verificação de usuário
-- [ ] - [ ] Formatação dos campos de entrada
-- [ ] - [ ] Criação de perfil de dono
-- [ ] - [ ] Editar perfil
-- [ ] - [ ] Banco de dados
-- [ ] - [ ] Criação de lojas
-- [ ] - [ ] Criação de avaliações
-- [ ] - [ ] Mecanismo de busca
+- [X] Criação de usuário
+- [X] Verificação de usuário
+- [ ] Formatação dos campos de entrada
+- [ ] Criação de perfil de dono
+- [ ] Editar perfil
+- [ ] Banco de dados
+- [ ] Criação de lojas
+- [ ] Criação de avaliações
+- [ ] Mecanismo de busca
 
 
 # UnBHUB
