@@ -1,8 +1,8 @@
 > ### Frontend
 - [X] Tela de Cadastro
 - [X] Tela de Login
-- [X] Tela de Entrada
-- [ ] Tela de CompletarCadastro // Daniel
+- [ ] Tela de Entrada // Daniel
+- [X] Tela de CompletarCadastro
 - [ ] Tela de Cliente
 - [ ] Tela de Dono
 - [ ] Tela da Loja
