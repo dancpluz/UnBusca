@@ -88,3 +88,7 @@
     -fx-background-color: transparent;
     -fx-font-size: 24;
 }
+
+.labelSemi{
+    -fx-font-family: "Montserrat SemiBold";
+}
