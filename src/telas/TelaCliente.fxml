@@ -3,40 +3,39 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1240.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1240.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.MenuClienteController">
    <children>
       <BorderPane layoutX="30.0" layoutY="46.0" prefHeight="727.0" prefWidth="236.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <right>
             <VBox prefHeight="810.0" prefWidth="804.0" BorderPane.alignment="CENTER">
                <children>
-                  <HBox prefHeight="191.0" prefWidth="456.0">
+                  <HBox alignment="CENTER" prefHeight="191.0" prefWidth="456.0">
                      <children>
-                        <Label alignment="CENTER" prefHeight="430.0" prefWidth="1024.0" text="Catálogo de lojas">
+                        <Label fx:id="lblCatalogo" alignment="CENTER" prefHeight="430.0" prefWidth="1024.0" text="Catálogo de lojas">
                            <font>
                               <Font name="Cambria Bold" size="36.0" />
                            </font>
                         </Label>
                      </children>
                   </HBox>
-                  <ScrollPane prefHeight="619.0" prefWidth="804.0">
+                  <ScrollPane fx:id="scrollLojas" prefHeight="619.0" prefWidth="804.0">
                      <content>
-                        <GridPane prefHeight="7.0" prefWidth="0.0">
-                          <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                          </columnConstraints>
+                        <GridPane fx:id="gridLojas" prefHeight="6.0" prefWidth="27.0">
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                           </rowConstraints>
                         </GridPane>
                      </content>
                   </ScrollPane>
@@ -48,19 +47,19 @@
                <children>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <ImageView fitHeight="153.0" fitWidth="189.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="imgUnbLogo" fitHeight="153.0" fitWidth="189.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@img/Símbolo_da_UnB.png" />
+                              <Image url="@../imagens/Símbolo_da_UnB.png" />
                            </image>
                         </ImageView>
-                        <Label alignment="CENTER" prefHeight="161.0" prefWidth="236.0" text="UNB HUB">
+                        <Label fx:id="lblUnbHub" alignment="CENTER" prefHeight="161.0" prefWidth="236.0" text="UNB HUB">
                            <font>
                               <Font name="Cambria" size="43.0" />
                            </font>
                         </Label>
                      </children>
                   </HBox>
-                  <Label alignment="CENTER" prefHeight="65.0" prefWidth="445.0" text="Área do cliente" textFill="#9a9595">
+                  <Label fx:id="lblAreaCliente" alignment="CENTER" prefHeight="65.0" prefWidth="445.0" text="Área do cliente" textFill="#9a9595">
                      <font>
                         <Font name="Cambria Italic" size="33.0" />
                      </font>
@@ -70,17 +69,17 @@
                         <Pane prefHeight="110.0" prefWidth="24.0" />
                         <ImageView fitHeight="110.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@img/download.png" />
+                              <Image url="@../imagens/download.png" />
                            </image>
                         </ImageView>
-                        <VBox prefHeight="110.0" prefWidth="303.0">
+                        <VBox fx:id="vboxUser" prefHeight="110.0" prefWidth="303.0">
                            <children>
-                              <Label alignment="CENTER" prefHeight="38.0" prefWidth="364.0" text="Usuário">
+                              <Label fx:id="lblUser" alignment="CENTER" prefHeight="38.0" prefWidth="364.0" text="Usuário">
                                  <font>
                                     <Font name="Cambria Bold" size="24.0" />
                                  </font>
                               </Label>
-                              <Label alignment="CENTER" opacity="0.71" prefHeight="73.0" prefWidth="313.0" text="Seja bem-vindo(a)!">
+                              <Label fx:id="lblSejaBem" alignment="CENTER" opacity="0.71" prefHeight="73.0" prefWidth="313.0" text="Seja bem-vindo(a)!">
                                  <font>
                                     <Font size="26.0" />
                                  </font>
@@ -95,14 +94,14 @@
                         <VBox prefHeight="105.0" prefWidth="468.0">
                            <children>
                               <Pane prefHeight="18.0" prefWidth="413.0" />
-                              <Button mnemonicParsing="false" prefHeight="88.0" prefWidth="413.0" text="Avaliações">
+                              <Button id="botaoAvaliacao" fx:id="bttAvaliacao" mnemonicParsing="false" prefHeight="88.0" prefWidth="413.0" text="Avaliações">
                                  <font>
                                     <Font name="Cambria" size="38.0" />
                                  </font>
                                  <graphic>
                                     <ImageView fitHeight="46.0" fitWidth="50.0">
                                        <image>
-                                          <Image url="@img/Star_icon_stylized.svg.png" />
+                                          <Image url="@../imagens/Star_icon_stylized.svg.png" />
                                        </image>
                                     </ImageView>
                                  </graphic>
@@ -112,16 +111,44 @@
                         <Pane prefHeight="105.0" prefWidth="80.0" />
                      </children>
                   </HBox>
-                  <Pane prefHeight="463.0" prefWidth="436.0" />
-                  <HBox prefHeight="84.0" prefWidth="436.0">
+                  <Pane prefHeight="463.0" prefWidth="436.0">
+                     <children>
+                        <BorderPane layoutX="17.0" layoutY="14.0" prefHeight="345.0" prefWidth="407.0">
+                           <center>
+                              <TextField fx:id="fieldBuscarLoja" alignment="CENTER" prefHeight="25.0" prefWidth="216.0" promptText="Buscar loja" BorderPane.alignment="CENTER" />
+                           </center>
+                           <left>
+                              <Pane prefHeight="345.0" prefWidth="103.0" BorderPane.alignment="CENTER" />
+                           </left>
+                           <right>
+                              <VBox prefHeight="308.0" prefWidth="120.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Pane prefHeight="160.0" prefWidth="117.0" />
+                                    <Button fx:id="bttBuscarLoja" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Buscar" />
+                                 </children>
+                              </VBox>
+                           </right>
+                        </BorderPane>
+                        <HBox prefHeight="164.0" prefWidth="436.0">
+                           <children>
+                              <Pane prefHeight="147.0" prefWidth="111.0" />
+                              <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" prefHeight="169.0" prefWidth="213.0" text="UNBusca">
+                                 <font>
+                                    <Font size="37.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children></Pane>
+                  <HBox fx:id="hboxLogout" prefHeight="84.0" prefWidth="436.0">
                      <children>
                         <Pane prefHeight="80.0" prefWidth="24.0" />
-                        <ImageView fitHeight="81.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="imgLogout" fitHeight="81.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@img/logoff.png" />
+                              <Image url="@../imagens/logoff.png" />
                            </image>
                         </ImageView>
-                        <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="85.0" prefWidth="331.0" text="Logout">
+                        <Button id="botaoLogout" fx:id="bttLogout" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="85.0" prefWidth="331.0" text="Logout">
                            <font>
                               <Font name="Cambria Bold" size="30.0" />
                            </font>
