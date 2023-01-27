@@ -26,7 +26,7 @@ public class ControleMenu implements Initializable {
     private Scene scene;
     private Parent root;
     @FXML
-    private Button btnSair,btnCadastro;
+    private Button btnSair;
     @FXML
     private TextField txtNome, txtUsername, txtSenha, txtCpf;
     @FXML
