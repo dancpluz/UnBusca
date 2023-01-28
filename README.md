@@ -1,4 +1,7 @@
-Para utilizar o .jar coloque o arquivo "Start.bat" no mesmo diretório do "unbhub.jar" e edite o bat colocando seu path do javafx nele e então crie um diretório chamado "data" e dentro dele 2 diretórios: "usuarios" e "imagens"
+Pra testar o aplicativo é só editar o bat que esta dentro da pasta "app" com o path para o javafx/lib do seu computdador e executar o "Start.bat"
+
+
+Para utilizar o .jar depois de usar o clean and build coloque o arquivo "Start.bat" no mesmo diretório do "unbhub.jar" e edite o bat colocando seu path do javafx nele e então crie um diretório chamado "data" e dentro dele 2 diretórios: "usuarios" e "imagens"
 
 <pre>
 |_Start.bat
