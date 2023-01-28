@@ -1,10 +1,10 @@
 Para utilizar o .jar coloque o arquivo "Start.bat" no mesmo diretório do "unbhub.jar" e edite o bat colocando seu path do javafx nele e então crie um diretório chamado "data" e dentro dele 2 diretórios: "usuarios" e "imagens"
 
-|_Start.bat
-|_unbhub.jar
-|_data
-  |_usuarios
-  |_imagens
+|_Start.bat\n
+|_unbhub.jar\n
+|_data\n
+  |_usuarios\n
+  |_imagens\n
 
 
 Estou estudando a possibilidade de utilarmos java with maven para deixar a distribuição do projeto completamente portatil.
