@@ -9,7 +9,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="360.0" prefWidth="640.0" style="-fx-background-color: #004E64;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleMenu">
    <children>
-      <Label alignment="CENTER" layoutX="141.0" layoutY="45.0" prefHeight="66.0" prefWidth="358.0" text="Selecione seu Tipo de Conta" textAlignment="CENTER" textFill="#f7f7ff" wrapText="true">
+      <Label alignment="CENTER" layoutX="141.0" layoutY="52.0" prefHeight="66.0" prefWidth="358.0" text="Selecione seu Tipo de Conta" textAlignment="CENTER" textFill="#f7f7ff" wrapText="true">
          <font>
             <Font size="24.0" />
          </font>
@@ -35,17 +35,19 @@
             <Image url="@../imagens/LogoBigDark.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="107.0" fitWidth="98.0" layoutX="195.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../imagens/ButtonPerfil.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="94.0" fitWidth="92.0" layoutX="344.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="192.0" layoutY="122.0" mnemonicParsing="false" onAction="#contaCliente" prefHeight="94.0" prefWidth="98.0" style="-fx-background-color: transparent;" textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="88.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/ButtonPerfil.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="332.0" layoutY="111.0" mnemonicParsing="false" onAction="#contaDono" prefHeight="96.0" prefWidth="84.0" style="-fx-background-color: transparent;" textAlignment="CENTER" />
+      <ImageView fitHeight="84.0" fitWidth="77.0" layoutX="352.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagens/ButtonLoja.png" />
          </image>
       </ImageView>
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="203.0" layoutY="123.0" mnemonicParsing="false" onAction="#contaCliente" prefHeight="94.0" prefWidth="81.0" style="-fx-background-color: transparent;" textAlignment="CENTER" />
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="350.0" layoutY="123.0" mnemonicParsing="false" onAction="#contaDono" prefHeight="94.0" prefWidth="81.0" style="-fx-background-color: transparent;" textAlignment="CENTER" />
    </children>
 </AnchorPane>

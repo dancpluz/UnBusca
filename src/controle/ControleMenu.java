@@ -26,18 +26,29 @@ public class ControleMenu implements Initializable {
     private Scene scene;
     private Parent root;
     @FXML
-    private Button btnSair,btnCadastro;
+    private Button btnSair;
     @FXML
     private TextField txtNome, txtUsername, txtSenha, txtCpf;
     @FXML
     private Label lblErro;
-
     double x=0,y=0;
     
     // Fecha a janela
     public void close() {
         Stage stage = (Stage) btnSair.getScene().getWindow();
         stage.close();
+    }
+    
+    // Ao clicar na tela arrastar a janela
+    public void telaArrastavel(Parent root, Stage stage) {        
+        root.setOnMousePressed(mouseEvent -> {
+            x = mouseEvent.getSceneX();
+            y = mouseEvent.getSceneY();
+        });
+        root.setOnMouseDragged(mouseEvent -> {
+            stage.setX(mouseEvent.getScreenX() - x);
+            stage.setY(mouseEvent.getScreenY() - y);
+        });
     }
     
     // Troca a tela de Cadastro pela tela de Login
@@ -72,19 +83,6 @@ public class ControleMenu implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-    
-    // Ao clicar na tela arrastar a janela
-    public void telaArrastavel(Parent root, Stage stage) {        
-        root.setOnMousePressed(mouseEvent -> {
-            x = mouseEvent.getSceneX();
-            y = mouseEvent.getSceneY();
-        });
-        root.setOnMouseDragged(mouseEvent -> {
-            stage.setX(mouseEvent.getScreenX() - x);
-            stage.setY(mouseEvent.getScreenY() - y);
-        });
-    }
-    
     
     // Criar um novo usuário
     public int criarCliente(){
@@ -167,6 +165,7 @@ public class ControleMenu implements Initializable {
         
     }
     
+    // Após escolhido conta de Dono, troca pra a tela de completar cadastro ou a tela de dono.
     public void contaDono(ActionEvent event) throws IOException {
         boolean dono = false;
         // ** se a conta não tiver telefone e de nascimento cadastrada
@@ -189,6 +188,7 @@ public class ControleMenu implements Initializable {
         stage.show();
     }
     
+    // Após escolhido conta de Cliente, troca pra a tela do cliente.
     public void contaCliente(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("/telas/TelaCliente.fxml"));       
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
