@@ -5,7 +5,7 @@ Para utilizar o .jar coloque o arquivo "Start.bat" no mesmo diretório do "unbhu
 |_unbhub.jar
 |_data
   |_usuarios
-  |_imagen
+  |_imagens
 </pre>
 
 Estou estudando a possibilidade de utilarmos java with maven para deixar a distribuição do projeto completamente portatil.
