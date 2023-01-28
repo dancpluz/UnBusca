@@ -4,22 +4,27 @@
  */
 package unbhub;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 /**
  *
  * @author Daniel
  */
 public class Avaliacao {
-    private int nota, idUsuario, idLoja;
-    private String comentario;
+    private int nota, idUsuario;
+    private String comentario, idLoja;
+    private LocalDate data;
 
     public Avaliacao() {
     }
 
-    public Avaliacao(int nota, String comentario, int idU, int idL) {
+    public Avaliacao(int nota, String comentario, int idU, String idL, LocalDate d) {
         this.nota = nota;
         this.comentario = comentario;
         idUsuario = idU;
         idLoja = idL;
+        data = d;
     }
     
     public int getNota() {
@@ -42,7 +47,12 @@ public class Avaliacao {
         return idUsuario;
     }
     
-    public int getIdLoja() {
+    public String getIdLoja() {
         return idLoja;
     }
+    
+    public String getDataString() {
+        return data.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    }
+    
 }

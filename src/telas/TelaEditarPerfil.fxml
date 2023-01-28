@@ -6,36 +6,30 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="apnEditarPerfil" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" fx:id="apnEditarPerfil" prefHeight="360.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleEditarPerfil">
    <children>
       <ImageView fx:id="imgPerfil" fitHeight="82.0" fitWidth="82.0" layoutX="60.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/perfil-de-usuario.png" />
+            <Image url="@../imagens/download.png" />
          </image>
       </ImageView>
       <Button fx:id="btnMudar" alignment="CENTER" layoutX="50.0" layoutY="146.0" mnemonicParsing="false" text="Mudar Imagem" />
-      <Button fx:id="btnVoltar" layoutX="50.0" layoutY="341.0" mnemonicParsing="false" text="&lt;-" />
-      <Button fx:id="btnSalvar" layoutX="117.0" layoutY="341.0" mnemonicParsing="false" text="Salvar Alterações" />
-      <TextField fx:id="txtNome" layoutX="201.0" layoutY="86.0" prefHeight="23.0" prefWidth="158.0" promptText="Nome" />
-      <TextField fx:id="txtUsername" layoutX="201.0" layoutY="235.0" prefHeight="23.0" prefWidth="158.0" promptText="Usuário" />
-      <TextField fx:id="txtSenha" editable="false" layoutX="201.0" layoutY="275.0" prefHeight="23.0" prefWidth="158.0" promptText="Senha" />
-      <Label fx:id="lblPessoal" layoutX="201.0" layoutY="42.0" text="Informação Pessoal">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <TextField fx:id="txtCPF" layoutX="201.0" layoutY="127.0" prefHeight="23.0" prefWidth="158.0" promptText="CPF" />
-      <TextField fx:id="txtTelefone" layoutX="386.0" layoutY="86.0" prefHeight="23.0" prefWidth="158.0" promptText="Telefone" />
-      <TextField fx:id="txtData" layoutX="386.0" layoutY="127.0" prefHeight="23.0" prefWidth="158.0" promptText="Data de Nascimento" />
-      <Label fx:id="lblConta" layoutX="202.0" layoutY="191.0" text="Conta">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <Button fx:id="btnMudarSenha" layoutX="452.0" layoutY="341.0" mnemonicParsing="false" text="Mudar Senha" />
-      <TextField fx:id="txtNovaSenha" layoutX="386.0" layoutY="235.0" prefHeight="23.0" prefWidth="158.0" promptText="Nova Senha" />
-      <TextField fx:id="txtConfirmarSenha" layoutX="386.0" layoutY="275.0" prefHeight="23.0" prefWidth="158.0" promptText="Confirmar Senha" />
+      <Button fx:id="btnVoltar" layoutX="30.0" layoutY="305.0" mnemonicParsing="false" onAction="#voltar" text="Voltar" />
+      <Button fx:id="btnSalvar" layoutX="499.0" layoutY="305.0" mnemonicParsing="false" text="Salvar Alterações" />
+      <TextField fx:id="txtNome" layoutX="335.0" layoutY="76.0" prefHeight="23.0" prefWidth="158.0" promptText="Nome" />
+      <TextField fx:id="txtUsername" layoutX="335.0" layoutY="109.0" prefHeight="23.0" prefWidth="158.0" promptText="Nome de usuário" />
+      <TextField fx:id="txtSenhaAtual" editable="false" layoutX="395.0" layoutY="305.0" prefHeight="25.0" prefWidth="98.0" promptText="Senha atual" />
+      <TextField fx:id="txtNovaSenha" layoutX="335.0" layoutY="224.0" prefHeight="23.0" prefWidth="158.0" promptText="Nova Senha" />
+      <TextField fx:id="txtConfirmarSenha" layoutX="335.0" layoutY="259.0" prefHeight="23.0" prefWidth="158.0" promptText="Confirmar Senha" />
+      <Button fx:id="btnSair" alignment="CENTER" layoutX="557.0" layoutY="22.0" mnemonicParsing="false" onAction="#close" prefHeight="40.0" prefWidth="53.0" styleClass="buttonX" text="X" textFill="#7ae582" />
+      <Label layoutX="251.0" layoutY="82.0" text="Nome:" />
+      <Label layoutX="223.0" layoutY="113.0" text="Username:" />
+      <Label layoutX="205.0" layoutY="228.0" text="Alterara senha:" />
+      <TextField fx:id="txtTelefone" disable="true" layoutX="335.0" layoutY="171.0" prefHeight="25.0" prefWidth="158.0" promptText="Telefone" />
+      <TextField fx:id="txtData" disable="true" layoutX="335.0" layoutY="139.0" prefHeight="25.0" prefWidth="158.0" promptText="Data de nascimento" />
+      <Label layoutX="180.0" layoutY="143.0" text="Data de nascimento:" />
+      <Label layoutX="235.0" layoutY="172.0" text="Telefone:" />
+      <Label fx:id="lblErro" layoutX="403.0" layoutY="330.0" textFill="RED" />
    </children>
 </AnchorPane>

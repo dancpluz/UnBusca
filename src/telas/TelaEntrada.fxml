@@ -5,7 +5,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="360.0" prefWidth="640.0" style="-fx-background-color: #004E64;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControlePerfil">
+<AnchorPane id="AnchorPane" prefHeight="360.0" prefWidth="640.0" style="-fx-background-color: #004E64;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleEntrada">
    <children>
       <ImageView fitHeight="117.0" fitWidth="107.0" layoutX="448.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -23,13 +23,13 @@
             <Image url="@../imagens/LogoBigDark.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imgFoto" fitHeight="150.0" fitWidth="200.0" layoutX="55.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgFoto" fitHeight="107.0" fitWidth="107.0" layoutX="88.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../build/classes/imagens/perfil-de-usuario.png" />
+            <Image url="@../imagens/download.png" />
          </image>
       </ImageView>
       <Button fx:id="btnEspacoCliente" layoutX="274.0" layoutY="256.0" mnemonicParsing="false" text="Espaço Cliente" />
-      <Button fx:id="btnMeuPerfil" layoutX="95.0" layoutY="256.0" mnemonicParsing="false" text="Meu Perfil" />
+      <Button fx:id="btnMeuPerfil" layoutX="107.0" layoutY="256.0" mnemonicParsing="false" onAction="#telaPerfil" text="Meu Perfil" />
       <Button fx:id="btnMinhasLojas" layoutX="459.0" layoutY="256.0" mnemonicParsing="false" text="Minhas Lojas" />
    </children>
 </AnchorPane>

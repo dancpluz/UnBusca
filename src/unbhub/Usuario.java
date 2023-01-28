@@ -1,5 +1,6 @@
 package unbhub;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Usuario {
@@ -50,8 +51,8 @@ public class Usuario {
         this.username = user;
     }
     
-    public void adicionarAvaliacao(int nota, String comentario, int idLoja) {
-        avaliacoes.add(new Avaliacao(nota, comentario, id, idLoja));
+    public void adicionarAvaliacao(int nota, String comentario, String idLoja) {
+        avaliacoes.add(new Avaliacao(nota, comentario, id, idLoja, LocalDate.now()));
     }
     
     public ArrayList<Avaliacao> getAvaliacoes() {
