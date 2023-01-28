@@ -112,10 +112,36 @@
     -fx-background-color: transparent;
     -fx-border-color:  verde;
     -fx-border-width:  1;
-    -fx-border-insets: 0, 0 0 1 0;
 }
 
 .buttonBack {
     -fx-font-family: "Montserrat Regular";
     -fx-background-color: transparent;
+}
+
+.buttonBack:hover {
+    -fx-border-color: verde;
+    -fx-border-width:  1;
+}
+
+.buttonBack:pressed {
+    -fx-border-color: derive(verde,-20%);
+}
+
+.buttonUI {
+    -fx-font-family: "Montserrat Regular";
+    -fx-background-color: transparent;
+    -fx-font-size: 12;
+    -fx-text-fill: branco;
+    -fx-border-color:  verde;
+    -fx-border-width:  1;
+}
+
+.buttonUI:hover {
+    -fx-background-color: verde;
+}
+
+.buttonUI:pressed {
+    -fx-background-color: derive(verde,-20%);
+    -fx-border-color: derive(verde,-20%);
 }

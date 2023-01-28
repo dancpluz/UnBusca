@@ -60,6 +60,37 @@ public class ControleCliente implements Initializable {
         stage.show();
     }
     
+    // Entra na tela de Editar Perfil
+    public void editarConta(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("/telas/TelaEditarPerfil.fxml"));       
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+
+        // Aplicar estilo css na cena
+        String css = this.getClass().getResource("/telas/estilo.css").toExternalForm();
+        scene.getStylesheets().add(css);
+
+        telaArrastavel(root,stage);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+        
+    public void voltarCliente(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("/telas/TelaCliente.fxml"));       
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+
+        // Aplicar estilo css na cena
+        String css = this.getClass().getResource("/telas/estilo.css").toExternalForm();
+        scene.getStylesheets().add(css);
+
+        telaArrastavel(root,stage);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+        
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
