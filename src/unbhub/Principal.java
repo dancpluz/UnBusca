@@ -21,7 +21,12 @@ public class Principal extends Application {
     //Variavel public static contento um contador usado para gerar ids unicas para usuarios.
     public static int cIdUsuarios = 1;
     
+    //Variavel static que indica qual usuario esta logado no momneto
     public static Usuario usuarioLogado;
+    
+    //arry static contendo todas as lojas
+    public static ArrayList<Loja> todasLojas = new ArrayList<>();
+     
     
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -58,7 +63,7 @@ public class Principal extends Application {
     }
     
     public static void main(String[] args) {
+        ObjectSer.carregar();     
         launch(args);
-    }
-    
+    }  
 }

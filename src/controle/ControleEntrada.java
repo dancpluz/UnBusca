@@ -22,6 +22,7 @@ import unbhub.Usuario;
 import java.util.Map;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import unbhub.ObjectSer;
 
 
 public class ControleEntrada implements Initializable {
@@ -56,6 +57,23 @@ public class ControleEntrada implements Initializable {
     public void close() {
         Stage stage = (Stage) btnSair.getScene().getWindow();
         stage.close();
+        ObjectSer.salvar();
+    }
+    
+    
+    public void teste(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("/telas/TelaCliente.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        
+        // Aplicar estilo css na cena
+        String css = this.getClass().getResource("/telas/estilo.css").toExternalForm();
+        scene.getStylesheets().add(css);
+        
+        telaArrastavel(root,stage);
+        
+        stage.setScene(scene);
+        stage.show();
     }
     
     
@@ -80,7 +98,7 @@ public class ControleEntrada implements Initializable {
         Usuario user = Principal.usuarioLogado;
 
         //Carrega foto de perfil
-        File foto = new File(String.format("%d.png", user.getId()));     
+        File foto = new File(String.format("data/imagens/%d.png", user.getId()));     
         if (foto.isFile()) {    
             imgFoto.setImage(new Image(foto.toURI().toString()));
         }

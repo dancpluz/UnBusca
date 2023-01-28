@@ -28,7 +28,7 @@
             <Image url="@../imagens/download.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnEspacoCliente" layoutX="274.0" layoutY="256.0" mnemonicParsing="false" text="Espaço Cliente" />
+      <Button fx:id="btnEspacoCliente" layoutX="274.0" layoutY="256.0" mnemonicParsing="false" onAction="#teste" text="Espaço Cliente" />
       <Button fx:id="btnMeuPerfil" layoutX="107.0" layoutY="256.0" mnemonicParsing="false" onAction="#telaPerfil" text="Meu Perfil" />
       <Button fx:id="btnMinhasLojas" layoutX="459.0" layoutY="256.0" mnemonicParsing="false" text="Minhas Lojas" />
    </children>

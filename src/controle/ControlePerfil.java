@@ -19,6 +19,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import unbhub.ObjectSer;
 import unbhub.Principal;
 import unbhub.Usuario;
 
@@ -121,6 +122,7 @@ public class ControlePerfil implements Initializable {
     public void close() {
         Stage stage = (Stage) btnSair.getScene().getWindow();
         stage.close();
+        ObjectSer.salvar();
     }
     
     
@@ -129,7 +131,7 @@ public class ControlePerfil implements Initializable {
         Usuario user = Principal.usuarioLogado;
 
         //Carrega foto de perfil
-        File foto = new File(String.format("%d.png", user.getId()));     
+        File foto = new File(String.format("data/imagens/%d.png", user.getId()));     
         if (foto.isFile()) {    
             imgFoto.setImage(new Image(foto.toURI().toString()));
         }

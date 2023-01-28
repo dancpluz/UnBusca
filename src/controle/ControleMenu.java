@@ -19,6 +19,7 @@ import unbhub.Principal;
 //import unbhub.Cliente;
 import unbhub.Usuario;
 import java.util.Map;
+import unbhub.ObjectSer;
 
 
 
@@ -177,6 +178,7 @@ public class ControleMenu implements Initializable {
     public void close() {
         Stage stage = (Stage) btnSair.getScene().getWindow();
         stage.close();
+        ObjectSer.salvar();
     }
     
     @Override

@@ -2,8 +2,12 @@ package unbhub;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.io.Serializable;
 
-public class Usuario {
+
+
+
+public class Usuario implements Serializable{
     private String nome, senha, username, cpf;
     private int id;
     
