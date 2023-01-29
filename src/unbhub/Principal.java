@@ -31,7 +31,7 @@ public class Principal extends Application {
     
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/telas/TelaLogin.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/telas/TelaDono.fxml"));
         Scene scene = new Scene(root,640,360);
         
         // Aplicar estilo css na cena

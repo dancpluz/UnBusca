@@ -100,6 +100,7 @@ public class ControleCliente implements Initializable {
         
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        /*
         Usuario user = Principal.usuarioLogado;
         cirAvatar.setFill(new ImagePattern(new Image("/imagens/Avatar.png")));
         
@@ -108,7 +109,6 @@ public class ControleCliente implements Initializable {
         
         if (foto.isFile()) {  
             cirAvatar.setFill(new ImagePattern(new Image(foto.toURI().toString())));
-        }
+        }*/
     }    
-    
 }

@@ -4,23 +4,46 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="360.0" prefWidth="640.0" style="-fx-background-color: #004E64;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleCliente">
    <children>
-      <Button layoutX="190.0" layoutY="363.0" mnemonicParsing="false" text="Cancelar" />
-      <Button layoutX="346.0" layoutY="363.0" mnemonicParsing="false" text="Salvar" />
-      <TextField layoutX="190.0" layoutY="72.0" prefHeight="25.0" prefWidth="220.0" />
-      <TextArea layoutX="160.0" layoutY="274.0" prefHeight="71.0" prefWidth="280.0" />
-      <TextField layoutX="190.0" layoutY="109.0" prefHeight="25.0" prefWidth="220.0" />
-      <TextField layoutX="190.0" layoutY="149.0" prefHeight="25.0" prefWidth="220.0" />
-      <Label layoutX="132.0" layoutY="76.0" text="Nome:" />
-      <Label layoutX="136.0" layoutY="113.0" text="Local:" />
-      <Label layoutX="123.0" layoutY="153.0" text="Horário:" />
-      <TextField layoutX="190.0" layoutY="188.0" prefHeight="25.0" prefWidth="220.0" />
-      <Label layoutX="122.0" layoutY="192.0" text="Imagem:" />
-      <Label layoutX="116.0" layoutY="274.0" text="Texto:" />
-      <TextField layoutX="190.0" layoutY="231.0" prefHeight="25.0" prefWidth="220.0" />
-      <Label layoutX="100.0" layoutY="235.0" text="Redes sociais:" />
+      <Button fx:id="btnMudar" alignment="CENTER" layoutX="39.0" layoutY="141.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="123.0" styleClass="buttonUI" text="Mudar Imagem" />
+      <Button fx:id="btnSalvar" layoutX="408.0" layoutY="300.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="138.0" styleClass="buttonUI" text="Salvar Alterações" />
+      <TextField fx:id="txtNome" layoutX="200.0" layoutY="75.0" prefHeight="23.0" prefWidth="158.0" promptText="Nome" />
+      <Label layoutX="200.0" layoutY="31.0" text="Crie sua Loja" textFill="#f7f7ff">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCPF" layoutX="200.0" layoutY="116.0" prefHeight="23.0" prefWidth="158.0" promptText="Horários Abertos" />
+      <TextField fx:id="txtLocal" layoutX="385.0" layoutY="75.0" prefHeight="23.0" prefWidth="158.0" promptText="Local" />
+      <TextField fx:id="txtData" layoutX="385.0" layoutY="116.0" prefHeight="23.0" prefWidth="158.0" promptText="Rede Social" />
+      <Label layoutX="200.0" layoutY="158.0" text="Descreva sua Loja" textFill="#f7f7ff">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgPerfil" fitHeight="82.0" fitWidth="82.0" layoutX="60.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/Avatar.png" />
+         </image>
+      </ImageView>
+      <Circle fx:id="cirAvatar" fill="DODGERBLUE" layoutX="101.0" layoutY="77.0" radius="41.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Button fx:id="btnSair" alignment="CENTER" layoutX="561.0" layoutY="15.0" mnemonicParsing="false" onAction="#close" prefHeight="40.0" prefWidth="53.0" styleClass="buttonX" text="X" textFill="#7ae582" />
+      <Button fx:id="btnVoltar" layoutX="39.0" layoutY="301.0" mnemonicParsing="false" onAction="#voltarCliente" prefHeight="28.0" prefWidth="94.0" styleClass="buttonBack" text="VOLTAR" textFill="#7ae582">
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/IconBack.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TextArea layoutX="199.0" layoutY="198.0" prefHeight="74.0" prefWidth="346.0" />
    </children>
 </AnchorPane>
