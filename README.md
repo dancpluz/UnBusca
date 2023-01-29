@@ -1,26 +1,25 @@
 > ### Frontend
 - [X] Tela de Cadastro
 - [X] Tela de Login
-- [ ] Tela de Entrada // Daniel
+- [X] Tela de Entrada
 - [X] Tela de CompletarCadastro
-- [ ] Tela de Cliente
+- [X] Tela de Cliente
+- [ ] Tela de Avaliações
 - [ ] Tela de Dono
 - [ ] Tela da Loja
 - [ ] Tela de Criar/Editar Lojas
-- [ ] Tela de Editar Perfil
-- [ ] FontAwesomeFX
-- [ ] ControlsFX
+- [X] Tela de Editar Perfil
 
 > ### Backend
 - [X] Criação de usuário
 - [X] Verificação de usuário
-- [ ] Formatação dos campos de entrada
 - [ ] Criação de perfil de dono
 - [ ] Editar perfil
-- [ ] Banco de dados
+- [X] Banco de dados
 - [ ] Criação de lojas
 - [ ] Criação de avaliações
 - [ ] Mecanismo de busca
+- [ ] Formatação dos campos de entrada
 
 
 # UnBHUB
