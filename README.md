@@ -4,10 +4,12 @@
 - [X] Tela de Entrada
 - [X] Tela de CompletarCadastro
 - [X] Tela de Cliente
-- [ ] Tela de Avaliações
-- [ ] Tela de Dono
-- [ ] Tela da Loja
-- [ ] Tela de Criar/Editar Lojas
+- [X] Tela de Avaliações
+- [X] Tela de Dono
+- [X] Tela da Loja
+- [X] Tela de Criar/Editar Lojas
+- [X] Tela de Criar/Editar Produtos
+- [X] Tela de Criar/Editar Avaliações
 - [X] Tela de Editar Perfil
 
 > ### Backend
