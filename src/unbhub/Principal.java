@@ -8,16 +8,30 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import java.util.ArrayList;
+import java.util.HashMap;
+import static javafx.application.Application.launch;
+
 
 
 public class Principal extends Application {
     double x=0,y=0;
-    public static ArrayList<Usuario> usuarios = new ArrayList<>();
-    public static int cIds = 1;
+    
+    //Mapa statico e public ocontendo todos os usarios.
+    public static HashMap<Integer, Usuario> usuarios = new HashMap<>();
+    
+    //Variavel public static contento um contador usado para gerar ids unicas para usuarios.
+    public static int cIdUsuarios = 1;
+    
+    //Variavel static que indica qual usuario esta logado no momneto
+    public static Usuario usuarioLogado;
+    
+    //arry static contendo todas as lojas
+    public static ArrayList<Loja> todasLojas = new ArrayList<>();
+     
     
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/telas/TelaCliente.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/telas/TelaLogin.fxml"));
         Scene scene = new Scene(root,640,360);
         
         // Aplicar estilo css na cena
@@ -50,7 +64,7 @@ public class Principal extends Application {
     }
     
     public static void main(String[] args) {
+        ObjectSer.carregar();     
         launch(args);
-    }
-    
+    }  
 }

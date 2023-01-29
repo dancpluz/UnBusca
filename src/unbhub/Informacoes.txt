@@ -1,3 +1,0 @@
-LojaInfo 123456 8 5 ceubinho ??? @LojaTeste1 credito
-LojaInfo 543211 5 7 udfinho ??? @LojaTeste2 debito
-LojaInfo 123454 3 9 BCE ??? @LojaTeste3 PIX

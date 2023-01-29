@@ -1,10 +1,21 @@
 package unbhub;
 
-public class Usuario {
-    private String nome, senha, username;
-    private int cpf, id;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.io.Serializable;
+
+
+
+
+public class Usuario implements Serializable{
+    private String nome, senha, username, cpf;
+    private int id;
     
-    public Usuario(String nome, String senha, String username, int cpf, int id) {
+    //Lista com todas as avaliações realizadas pelo usuario
+    private ArrayList<Avaliacao> avaliacoes = new ArrayList();
+    
+    
+    public Usuario(String nome, String senha, String username, String cpf, int id) {
         this.nome = nome;
         this.senha = senha;
         this.username = username;
@@ -24,11 +35,11 @@ public class Usuario {
         return username;
     }
     
-    public int getCPF() {
+    public String getCPF() {
         return cpf;
     }
     
-    public int getID() {
+    public int getId() {
         return id;
     }
     
@@ -42,5 +53,22 @@ public class Usuario {
     
     public void setUsername(String user) {
         this.username = user;
+    }
+    
+    public void adicionarAvaliacao(int nota, String comentario, String idLoja) {
+        avaliacoes.add(new Avaliacao(nota, comentario, id, idLoja, LocalDate.now()));
+    }
+    
+    public ArrayList<Avaliacao> getAvaliacoes() {
+        return avaliacoes;
+    }
+    
+    public void deleteAvaliacao(int index) {
+        avaliacoes.remove(index);
+    }
+    
+    public void editarAvaliacao(int index, int nota, String comentario) {
+        avaliacoes.get(index).setNota(nota);
+        avaliacoes.get(index).setComentario(comentario);
     }
 }

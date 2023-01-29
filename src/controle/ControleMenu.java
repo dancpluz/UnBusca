@@ -16,8 +16,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import unbhub.Principal;
-import unbhub.Cliente;
 import unbhub.Usuario;
+import java.util.Map;
+import unbhub.ObjectSer;
+
 
 
 public class ControleMenu implements Initializable {
@@ -25,30 +27,20 @@ public class ControleMenu implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    double x=0,y=0;
+    
     @FXML
     private Button btnSair;
     @FXML
     private TextField txtNome, txtUsername, txtSenha, txtCpf;
     @FXML
     private Label lblErro;
-    double x=0,y=0;
-    
-    // Fecha a janela
+
+     // Fecha a janela
     public void close() {
         Stage stage = (Stage) btnSair.getScene().getWindow();
         stage.close();
-    }
-    
-    // Ao clicar na tela arrastar a janela
-    public void telaArrastavel(Parent root, Stage stage) {        
-        root.setOnMousePressed(mouseEvent -> {
-            x = mouseEvent.getSceneX();
-            y = mouseEvent.getSceneY();
-        });
-        root.setOnMouseDragged(mouseEvent -> {
-            stage.setX(mouseEvent.getScreenX() - x);
-            stage.setY(mouseEvent.getScreenY() - y);
-        });
+        ObjectSer.salvar();
     }
     
     // Troca a tela de Cadastro pela tela de Login
@@ -84,6 +76,19 @@ public class ControleMenu implements Initializable {
         stage.show();
     }
     
+    // Ao clicar na tela arrastar a janela
+    public void telaArrastavel(Parent root, Stage stage) {        
+        root.setOnMousePressed(mouseEvent -> {
+            x = mouseEvent.getSceneX();
+            y = mouseEvent.getSceneY();
+        });
+        root.setOnMouseDragged(mouseEvent -> {
+            stage.setX(mouseEvent.getScreenX() - x);
+            stage.setY(mouseEvent.getScreenY() - y);
+        });
+    }
+    
+    
     // Criar um novo usuário
     public int criarCliente(){
         String nome = txtNome.getText(), 
@@ -97,14 +102,14 @@ public class ControleMenu implements Initializable {
         }
         
         // Checa se nome de usuario ja existe
-        for (Usuario user : Principal.usuarios) {
-            if (user.getUsername().equals(username)) {
+        for (Map.Entry<Integer, Usuario> i : Principal.usuarios.entrySet()) {
+            if (i.getValue().getUsername().equals(username)) {
                 return 1;
-            }    
+            }   
         }
         
-        Principal.usuarios.add(new Cliente(txtNome.getText(), txtSenha.getText(), txtUsername.getText(), Integer.parseInt(txtCpf.getText()), Principal.cIds));
-        Principal.cIds += 1;
+        Principal.usuarios.put(Principal.cIdUsuarios, new Usuario(txtNome.getText(), txtSenha.getText(), txtUsername.getText(), txtCpf.getText(), Principal.cIdUsuarios));
+        Principal.cIdUsuarios += 1;
         return 0;
     }
     
@@ -121,11 +126,11 @@ public class ControleMenu implements Initializable {
             case 1:
                 //caso username ja exista:
                 lblErro.setTextFill(Color.color(1,0,0));
-                lblErro.setText("Nome de Usuário já existe");
+                lblErro.setText("Nome de Usuário ja existe");
                 break;
             case 0:
                 lblErro.setTextFill(Color.color(0,1,0));
-                lblErro.setText("Usuário Cadastrado com sucesso");
+                lblErro.setText("Usuário cadastrado com sucesso");
                 txtNome.setText("");
                 txtSenha.setText("");
                 txtCpf.setText("");
@@ -138,9 +143,16 @@ public class ControleMenu implements Initializable {
     // Confere nome e senha e então realiza o login
     public void realizarLogin(ActionEvent event) throws IOException {
         String user = txtUsername.getText(), senha = txtSenha.getText();
-        for (Usuario u : Principal.usuarios) {
+        boolean notFound = true;
+        for (Map.Entry<Integer, Usuario> i : Principal.usuarios.entrySet()) {
+            Usuario u = i.getValue();
             if (u.getUsername().equals(user)) {
+                notFound = false;
                 if (u.checkSenha(senha)) {
+                    //Usuario e senha corretos:
+                    
+                    Principal.usuarioLogado = u;
+                  
                     root = FXMLLoader.load(getClass().getResource("/telas/TelaEntrada.fxml"));
                     stage = (Stage)((Node)event.getSource()).getScene().getWindow();
                     scene = new Scene(root);
@@ -161,9 +173,11 @@ public class ControleMenu implements Initializable {
             }
         }
         // Usuario não existe:
-        lblErro.setText("Usuário não encontrado");
-        
+        if(notFound) {
+        lblErro.setText("Usuário não encontrado");   
+        }
     }
+    
     
     // Após escolhido conta de Dono, troca pra a tela de completar cadastro ou a tela de dono.
     public void contaDono(ActionEvent event) throws IOException {
@@ -204,8 +218,11 @@ public class ControleMenu implements Initializable {
         stage.show();
     }
     
+    
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
+     
     }    
 }

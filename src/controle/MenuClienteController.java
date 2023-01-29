@@ -7,10 +7,14 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.Scanner;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
@@ -21,8 +25,11 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 import unbhub.Loja;
+import unbhub.ObjectSer;
+import unbhub.Principal;
 
 
 public class MenuClienteController implements Initializable{
@@ -31,50 +38,65 @@ public class MenuClienteController implements Initializable{
     
     private ArrayList<IdLojaController> controlhes = new ArrayList<IdLojaController>();
     
-    @FXML
-    private Button bttAvaliacao;
-
-    @FXML
-    private Button bttLogout;
-
-    @FXML
-    private GridPane gridLojas;
-
-    @FXML
-    private HBox hboxLogout;
-
-    @FXML
-    private ImageView imgLogout;
-
-    @FXML
-    private ImageView imgUnbLogo;
-
-    @FXML
-    private Label lblAreaCliente;
-
-    @FXML
-    private Label lblCatalogo;
-
-    @FXML
-    private Label lblSejaBem;
-
-    @FXML
-    private Label lblUnbHub;
-
-    @FXML
-    private Label lblUser;
-
-    @FXML
-    private ScrollPane scrollLojas;
-
-    @FXML
-    private VBox vboxUser;
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+    double x=0,y=0;
     
     @FXML
-    private Button bttBuscarLoja;
-        
+    private Button bttAvaliacao;
+    @FXML
+    private Button bttLogout;
+    @FXML
+    private GridPane gridLojas;
+    @FXML
+    private HBox hboxLogout;
+    @FXML
+    private ImageView imgLogout;
+    @FXML
+    private ImageView imgUnbLogo;
+    @FXML
+    private Label lblAreaCliente;
+    @FXML
+    private Label lblCatalogo;
+    @FXML
+    private Label lblSejaBem;
+    @FXML
+    private Label lblUnbHub;
+    @FXML
+    private Label lblUser;
+    @FXML
+    private ScrollPane scrollLojas;
+    @FXML
+    private VBox vboxUser;  
+    @FXML
+    private Button bttBuscarLoja;     
     @FXML
     private TextField fieldBuscarLoja;
+    @FXML
+    private Button btnSair;
+    
+
+    // Ao clicar na tela arrastar a janela
+    public void telaArrastavel(Parent root, Stage stage) {        
+        root.setOnMousePressed(mouseEvent -> {
+            x = mouseEvent.getSceneX();
+            y = mouseEvent.getSceneY();
+        });
+        root.setOnMouseDragged(mouseEvent -> {
+            stage.setX(mouseEvent.getScreenX() - x);
+            stage.setY(mouseEvent.getScreenY() - y);
+        });
+    }
+    
+    
+    //Botao de X fecha o programa
+    public void close() {
+        Stage stage = (Stage) btnSair.getScene().getWindow();
+        stage.close();
+        ObjectSer.salvar();
+    }
+    
     
     private void loadGridPane(){
         //Define o número de colunas e linhas iniciais para organizá-las (fxml) no gridpane.
@@ -112,6 +134,9 @@ public class MenuClienteController implements Initializable{
         }
     }
     
+    
+    
+    /*
     public void lerArquivo() throws FileNotFoundException{
         //Esse método lê o arquivo "Informacoes.txt" que contém os das lojas e
         //armazena os objetos loja com esses atributos no ArrayList.
@@ -131,15 +156,55 @@ public class MenuClienteController implements Initializable{
             }
         }
     }
+    */
+    
+ 
+    
+    //Logout e tela de login
+    public void logout(ActionEvent event) throws IOException {
+        Principal.usuarioLogado = null;
+        
+        root = FXMLLoader.load(getClass().getResource("/telas/TelaLogin.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        
+        // Aplicar estilo css na cena
+        String css = this.getClass().getResource("/telas/estilo.css").toExternalForm();
+        scene.getStylesheets().add(css);
+        
+        telaArrastavel(root,stage);
+        
+        stage.setScene(scene);
+        stage.show();
+    }    
+    
+    
+    //Botao de avaliações
+    public void meuPerfil(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("/telas/TelaPerfilUsuario.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        
+        // Aplicar estilo css na cena
+        String css = this.getClass().getResource("/telas/estilo.css").toExternalForm();
+        scene.getStylesheets().add(css);
+        
+        telaArrastavel(root,stage);
+        
+        stage.setScene(scene);
+        stage.show();
+    }
+      
+    
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb){
         //Inicializa a tela e implementa as funcionalidades de cada botão
-        try{
-            lerArquivo();
-        } catch (IOException e){
-            e.printStackTrace();
-        }
+        
+        
+        //Carrega array com todas as lojas
+        lojaObjects = Principal.todasLojas;       
         
         loadGridPane();
         
@@ -168,16 +233,5 @@ public class MenuClienteController implements Initializable{
                 }
             }
         });
-        
-        bttAvaliacao.setOnAction(e ->{
-            //Inicializa a tela de avaliações
-            //Escrever código aqui
-        });
-        
-        bttLogout.setOnAction(e -> {
-            //Logout da conta (queria discutir, pois existem várias maneiras de fazer)
-            //Escrever código aqui
-        });
     }
-
 }

@@ -6,16 +6,35 @@ public class Dono extends Usuario{
     
     private ArrayList<Loja> lojas = new ArrayList();
     private String telefone, data_nascimento;
+    private int cIdL = 1;
     
     
-    public Dono(String nome, String senha, String username, int cpf, int id, String telefone, String data_nascimento) {
+    public Dono(String nome, String senha, String username, String cpf, int id, String telefone, String data_nascimento) {
         super(nome, senha, username, cpf, id);
         this.telefone = telefone;
         this.data_nascimento = data_nascimento;
     }
-   /* 
-    public void adicionarLoja(int id, String horario, String local, String pop_up, String rede_social, String opcoes_pagamento) {
-        lojas.add(new Loja(id, horario_funcionamento, nota_media, local, pop_up, rede_social, opcoes_pagamento));
+
+    public String getTelefone() {
+        return telefone;
+    }
+    
+    public void setTelefone(String t) {
+        telefone = t;
+    }
+    
+    public String getData() {
+        return data_nascimento;
+    }
+    
+    public void setData(String d) {
+        data_nascimento = d;
+    }
+    
+    public void adicionarLoja(String horario, String local, String pop_up, String rede_social, String opcoes_pagamento) {
+        String idL = String.format("%d_%d", super.getId(), cIdL);
+        lojas.add(new Loja(idL, horario, local, pop_up, rede_social, opcoes_pagamento));
+        cIdL++;
     }
     
     public ArrayList<Loja> getLojas() {
@@ -26,10 +45,15 @@ public class Dono extends Usuario{
         lojas.remove(index);
     }
     
-    public void editarLoja(int index, String horario, String local, String pop_up, String rede_social, String opcoes_pagamento) {
-        lojas.get(index).setHorario_funcionamento(horario);
-        lojas.get(index).setPop_up(pop_up);
-        lojas.get(index).setRede_social(rede_social);
-        lojas.get(index).setOpcoes_pagamento(opcoes_pagamento);
-    }*/
+    public void editarLoja(String idl, String horario, String local, String pop_up, String rede_social, String opcoes_pagamento) {
+        for (Loja l : lojas) {
+            if (l.getId_loja().equals(idl)) {    
+                l.setHorario_funcionamento(horario);
+                l.setPop_up(pop_up);
+                l.setRede_social(rede_social);
+                l.setOpcoes_pagamento(opcoes_pagamento);
+                return;
+            }
+        }
+    }
 }

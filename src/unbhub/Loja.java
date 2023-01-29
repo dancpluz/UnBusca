@@ -1,4 +1,4 @@
-/*
+   /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -11,8 +11,8 @@ import java.util.ArrayList;
  * @author Daniel
  */
 public class Loja {
-    private int id_loja, horario_funcionamento, nota_media; 
-    private String local, pop_up, rede_social, opcoes_pagamento; /* Criar classe para local e talvez opcoes de pagamento */
+    private int nota_media; 
+    private String horario_funcionamento, local, id_loja, pop_up, rede_social, opcoes_pagamento; /* Criar classe para local e talvez opcoes de pagamento */
     
     private ArrayList<Produto> lista_produtos;
     private ArrayList<Avaliacao> lista_avaliacoes;
@@ -20,10 +20,9 @@ public class Loja {
     public Loja() {
     }
 
-    public Loja(int id_loja, int horario_funcionamento, int nota_media, String local, String pop_up, String rede_social, String opcoes_pagamento) {
+    public Loja(String id_loja, String horario_funcionamento, String local, String pop_up, String rede_social, String opcoes_pagamento) {
         this.id_loja = id_loja;
         this.horario_funcionamento = horario_funcionamento;
-        this.nota_media = nota_media;
         this.local = local;
         this.pop_up = pop_up;
         this.rede_social = rede_social;
@@ -31,24 +30,30 @@ public class Loja {
     }
 
     
-    public int getId_loja() {
+    public String getId_loja() {
         return id_loja;
     }
 
-    public void setId_loja(int id_loja) {
+    public void setId_loja(String id_loja) {
         this.id_loja = id_loja;
     }
 
-    public int getHorario_funcionamento() {
+    public String getHorario_funcionamento() {
         return horario_funcionamento;
     }
 
-    public void setHorario_funcionamento(int horario_funcionamento) {
+    public void setHorario_funcionamento(String horario_funcionamento) {
         this.horario_funcionamento = horario_funcionamento;
     }
 
-    public int getNota_media() {
-        return nota_media;
+    public double getNota_media() {
+        if (!lista_avaliacoes.isEmpty()) {
+            int c = 0;
+            for (Avaliacao a : lista_avaliacoes) {
+                c += a.getNota();
+            }
+            return c/lista_avaliacoes.size();
+        } else {return 0;}
     }
 
     public void setNota_media(int nota_media) {
@@ -101,7 +106,5 @@ public class Loja {
 
     public void setLista_avaliacoes(ArrayList<Avaliacao> lista_avaliacoes) {
         this.lista_avaliacoes = lista_avaliacoes;
-    }
-    
-    
+    }   
 }
