@@ -17,24 +17,23 @@ Estou estudando a possibilidade de utilarmos java with maven para deixar a distr
 > ### Frontend
 - [X] Tela de Cadastro
 - [X] Tela de Login
-- [ ] Tela de Entrada // Daniel
+- [x] Tela de Entrada // Daniel
 - [X] Tela de CompletarCadastro
-- [ ] Tela de Cliente
-- [ ] Tela de Dono
-- [ ] Tela da Loja
-- [ ] Tela de Criar/Editar Lojas
-- [ ] Tela de Editar Perfil
-- [ ] FontAwesomeFX
-- [ ] ControlsFX
+- [x] Tela de Cliente
+- [x] Tela de Dono
+- [x] Tela da Loja
+- [x] Tela de Criar/Editar Lojas
+- [x] Tela de Editar Perfil
+
 
 > ### Backend
 - [X] Criação de usuário
 - [X] Verificação de usuário
 - [ ] Formatação dos campos de entrada
-- [ ] Criação de perfil de dono
+- [x] Criação de perfil de dono
 - [ ] Editar perfil
-- [ ] Banco de dados
-- [ ] Criação de lojas
+- [x] Banco de dados
+- [x] Criação de lojas
 - [ ] Criação de avaliações
 - [ ] Mecanismo de busca
 
