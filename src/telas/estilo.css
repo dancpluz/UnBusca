@@ -83,8 +83,65 @@
     -fx-background-radius:  100;
 }
 
-.buttonX{
+.buttonX {
     -fx-font-family: "Montserrat Bold";
     -fx-background-color: transparent;
     -fx-font-size: 24;
+}
+
+.labelSemi {
+    -fx-font-family: "Montserrat SemiBold";
+}
+
+.labelRegular {
+     -fx-font-family: "Montserrat Regular";
+}
+
+.buttonAvatar {
+    -fx-background-color: transparent;
+    -fx-background-radius: 100;
+}
+
+.combo-box {
+    -fx-background-color: branco;
+    -fx-font-family: "Montserrat SemiBold";
+}
+
+.buttonBar {
+    -fx-font-family: "Montserrat Regular";
+    -fx-background-color: transparent;
+    -fx-border-color:  verde;
+    -fx-border-width:  1;
+}
+
+.buttonBack {
+    -fx-font-family: "Montserrat Regular";
+    -fx-background-color: transparent;
+}
+
+.buttonBack:hover {
+    -fx-border-color: verde;
+    -fx-border-width:  1;
+}
+
+.buttonBack:pressed {
+    -fx-border-color: derive(verde,-20%);
+}
+
+.buttonUI {
+    -fx-font-family: "Montserrat Regular";
+    -fx-background-color: transparent;
+    -fx-font-size: 12;
+    -fx-text-fill: branco;
+    -fx-border-color:  verde;
+    -fx-border-width:  1;
+}
+
+.buttonUI:hover {
+    -fx-background-color: verde;
+}
+
+.buttonUI:pressed {
+    -fx-background-color: derive(verde,-20%);
+    -fx-border-color: derive(verde,-20%);
 }

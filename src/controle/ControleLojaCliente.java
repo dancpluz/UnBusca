@@ -8,6 +8,6 @@ package controle;
  *
  * @author gcrbe
  */
-public class ControleEditarPerfil {
+public class ControleLojaCliente {
     
 }

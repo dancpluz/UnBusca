@@ -1,20 +1,26 @@
 package unbhub;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Dono extends Usuario{
     
     private ArrayList<Loja> lojas = new ArrayList();
-    private String telefone, data_nascimento;
+    private String telefone;
+    private LocalDate data_nascimento;
     private int cIdL = 1;
     
     
-    public Dono(String nome, String senha, String username, String cpf, int id, String telefone, String data_nascimento) {
+    public Dono(String nome, String senha, String username, String cpf, int id, String telefone, LocalDate data_nascimento) {
         super(nome, senha, username, cpf, id);
         this.telefone = telefone;
         this.data_nascimento = data_nascimento;
     }
 
+    public int getCIdL() {
+        return cIdL;
+    }
+    
     public String getTelefone() {
         return telefone;
     }
@@ -23,18 +29,20 @@ public class Dono extends Usuario{
         telefone = t;
     }
     
-    public String getData() {
+    public LocalDate getData() {
         return data_nascimento;
     }
     
-    public void setData(String d) {
+    public void setData(LocalDate d) {
         data_nascimento = d;
     }
     
-    public void adicionarLoja(String horario, String local, String pop_up, String rede_social, String opcoes_pagamento) {
+    public Loja adicionarLoja(String nome, String horario, String local, String pop_up, String rede_social, String opcoes_pagamento) {
         String idL = String.format("%d_%d", super.getId(), cIdL);
-        lojas.add(new Loja(idL, horario, local, pop_up, rede_social, opcoes_pagamento));
+        Loja l = new Loja(nome, idL, horario, local, pop_up, rede_social, opcoes_pagamento);
+        lojas.add(l);
         cIdL++;
+        return l;
     }
     
     public ArrayList<Loja> getLojas() {
@@ -45,13 +53,13 @@ public class Dono extends Usuario{
         lojas.remove(index);
     }
     
-    public void editarLoja(String idl, String horario, String local, String pop_up, String rede_social, String opcoes_pagamento) {
+    public void editarLoja(String idl, String nome, String horario, String local, String pop_up, String rede_social, String opcoes_pagamento) {
         for (Loja l : lojas) {
-            if (l.getId_loja().equals(idl)) {    
-                l.setHorario_funcionamento(horario);
-                l.setPop_up(pop_up);
-                l.setRede_social(rede_social);
-                l.setOpcoes_pagamento(opcoes_pagamento);
+            if (l.getIdLoja().equals(idl)) {    
+                l.setHorarioFuncionamento(horario);
+                l.setPopUp(pop_up);
+                l.setRedeSocial(rede_social);
+                l.setOpcoesPagamento(opcoes_pagamento);
                 return;
             }
         }
