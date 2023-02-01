@@ -1,5 +1,6 @@
 package unbhub;
 
+import unbhub.util.ObjectSer;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,11 +11,12 @@ import javafx.stage.StageStyle;
 import java.util.ArrayList;
 import java.util.HashMap;
 import static javafx.application.Application.launch;
+import unbhub.util.Tela;
 
 
 
 public class Principal extends Application {
-    double x=0,y=0;
+    public static double x=0,y=0;
     
     //Mapa statico e public ocontendo todos os usarios.
     public static HashMap<Integer, Usuario> usuarios = new HashMap<>();
@@ -27,12 +29,16 @@ public class Principal extends Application {
     
     //arry static contendo todas as lojas
     public static ArrayList<Loja> todasLojas = new ArrayList<>();
+      
+    
+    public static Stage primaryStage;
      
     
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/telas/TelaDono.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/telas/TelaLogin.fxml"));
         Scene scene = new Scene(root,640,360);
+        Principal.primaryStage = primaryStage;
         
         // Aplicar estilo css na cena
         String css = this.getClass().getResource("/telas/estilo.css").toExternalForm();
@@ -42,14 +48,7 @@ public class Principal extends Application {
         primaryStage.initStyle(StageStyle.UNDECORATED);
         
         // Ao clicar na tela arrastar a janela
-        root.setOnMousePressed(mouseEvent -> {
-            x = mouseEvent.getSceneX();
-            y = mouseEvent.getSceneY();
-        });
-        root.setOnMouseDragged(mouseEvent -> {
-            primaryStage.setX(mouseEvent.getScreenX() - x);
-            primaryStage.setY(mouseEvent.getScreenY() - y);
-        });
+        Tela.telaArrastavel(root, primaryStage);
         
         // Não redimensionável
         primaryStage.setResizable(false);
@@ -62,6 +61,12 @@ public class Principal extends Application {
         // Mostrar cena
         primaryStage.show(); 
     }
+    
+    public static void close() {
+        Principal.primaryStage.close();
+        ObjectSer.salvar();
+    }
+    
     
     public static void main(String[] args) {
         ObjectSer.carregar();     

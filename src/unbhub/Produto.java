@@ -1,20 +1,21 @@
 package unbhub;
 
 public class Produto {
-    private int id_produto;
-    private String nome_produto;
+    private String nomeImagem;
+    private String nome_produto, categoria;
     private float preço;
     private boolean disponibilidade;
     
-    public Produto(int id_produto, String nome_produto, float preço, boolean disponibilidade){
-        this.id_produto = id_produto;
+    public Produto(String id_produto, String nome_produto, float preço, String c){
+        this.nomeImagem = id_produto;
         this.nome_produto = nome_produto;
         this.preço = preço;
         this.disponibilidade = disponibilidade;
+        categoria = c;
     }
     
-    public int getIdProduto(){
-        return id_produto;
+    public String getIdProduto(){
+        return nomeImagem;
     }
     
     public String getNomeProduto(){

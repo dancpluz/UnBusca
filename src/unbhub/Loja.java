@@ -1,26 +1,23 @@
-   /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package unbhub;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
-/**
- *
- * @author Daniel
- */
 public class Loja {
     private int nota_media; 
-    private String horario_funcionamento, local, id_loja, pop_up, rede_social, opcoes_pagamento; /* Criar classe para local e talvez opcoes de pagamento */
+    private HashSet<String> categorias;
+    private String nome, horario_funcionamento, local, id_loja, pop_up, rede_social, opcoes_pagamento; /* Criar classe para local e talvez opcoes de pagamento */
+    private Dono dono;
     
-    private ArrayList<Produto> lista_produtos;
-    private ArrayList<Avaliacao> lista_avaliacoes;
+    private ArrayList<Produto> lista_produtos = new ArrayList<>();
+    private ArrayList<Avaliacao> lista_avaliacoes = new ArrayList<>();
 
     public Loja() {
     }
 
-    public Loja(String id_loja, String horario_funcionamento, String local, String pop_up, String rede_social, String opcoes_pagamento) {
+    public Loja(Dono d, String nome, String id_loja, String horario_funcionamento, String local, String pop_up, String rede_social, String opcoes_pagamento) {
+        dono = d;
+        this.nome = nome;
         this.id_loja = id_loja;
         this.horario_funcionamento = horario_funcionamento;
         this.local = local;
@@ -30,23 +27,35 @@ public class Loja {
     }
 
     
-    public String getId_loja() {
+    public void setNome(String n) {
+        nome = n;
+    }
+    
+    public String getNome() {
+        return nome;
+    }
+    
+    public Dono getDono() {
+        return dono;
+    }
+    
+    public String getIdLoja() {
         return id_loja;
     }
 
-    public void setId_loja(String id_loja) {
+    public void setIdLoja(String id_loja) {
         this.id_loja = id_loja;
     }
 
-    public String getHorario_funcionamento() {
+    public String getHorarioFuncionamento() {
         return horario_funcionamento;
     }
 
-    public void setHorario_funcionamento(String horario_funcionamento) {
+    public void setHorarioFuncionamento(String horario_funcionamento) {
         this.horario_funcionamento = horario_funcionamento;
     }
 
-    public double getNota_media() {
+    public double getNotaMedia() {
         if (!lista_avaliacoes.isEmpty()) {
             int c = 0;
             for (Avaliacao a : lista_avaliacoes) {
@@ -55,8 +64,41 @@ public class Loja {
             return c/lista_avaliacoes.size();
         } else {return 0;}
     }
-
-    public void setNota_media(int nota_media) {
+    
+    public Integer[] getNotas() {
+        Integer[] list = new Integer[]{0, 0, 0, 0, 0, 0};
+        for(Avaliacao a : lista_avaliacoes) {
+            int nota = a.getNota();
+            if(nota < 1) {
+                list[0]++;
+            } else if(nota < 2) {
+                list[1]++;
+            } else if(nota < 3) {
+                list[2]++;
+            } else if(nota < 4) {
+                list[3]++;
+            } else {list[4]++;} 
+        }
+        return list;
+    }
+    
+    public String getMencao() {
+        double nota = getNotaMedia();
+        
+        if(nota == 0) {
+            return "SR";
+        } else if(nota < 1) {
+            return "II";
+        } else if(nota < 2) {
+            return "MI";
+        } else if(nota < 3) {
+            return "MM";
+        } else if(nota < 4) {
+            return "MS";
+        } else {return "SS";}
+    }
+    
+    public void setNotaMedia(int nota_media) {
         this.nota_media = nota_media;
     }
 
@@ -68,43 +110,51 @@ public class Loja {
         this.local = local;
     }
 
-    public String getPop_up() {
+    public String getPopUp() {
         return pop_up;
     }
 
-    public void setPop_up(String pop_up) {
+    public void setPopUp(String pop_up) {
         this.pop_up = pop_up;
     }
 
-    public String getRede_social() {
+    public String getRedeSocial() {
         return rede_social;
     }
 
-    public void setRede_social(String rede_social) {
+    public void setRedeSocial(String rede_social) {
         this.rede_social = rede_social;
     }
 
-    public String getOpcoes_pagamento() {
+    public String getOpcoesPagamento() {
         return opcoes_pagamento;
     }
 
-    public void setOpcoes_pagamento(String opcoes_pagamento) {
+    public void setOpcoesPagamento(String opcoes_pagamento) {
         this.opcoes_pagamento = opcoes_pagamento;
     }
 
-    public ArrayList<Produto> getLista_produtos() {
+    public ArrayList<Produto> getListaProdutos() {
         return lista_produtos;
     }
 
-    public void setLista_produtos(ArrayList<Produto> lista_produtos) {
+    public void setListaProdutos(ArrayList<Produto> lista_produtos) {
         this.lista_produtos = lista_produtos;
     }
 
-    public ArrayList<Avaliacao> getLista_avaliacoes() {
+    public ArrayList<Avaliacao> getListaAvaliacoes() {
         return lista_avaliacoes;
     }
 
-    public void setLista_avaliacoes(ArrayList<Avaliacao> lista_avaliacoes) {
+    public void setListaAvaliacoes(ArrayList<Avaliacao> lista_avaliacoes) {
         this.lista_avaliacoes = lista_avaliacoes;
-    }   
+    }
+    
+    public void addAvaliacao(Avaliacao a) {
+        lista_avaliacoes.add(a);
+    }
+    
+    public void addProduto(Produto p) {
+        lista_produtos.add(p);
+    }
 }

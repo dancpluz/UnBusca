@@ -28,7 +28,9 @@
          </font>
       </Label>
       <TextField fx:id="txtCelular" layoutX="219.0" layoutY="165.0" prefHeight="26.0" prefWidth="201.0" promptText="Celular" />
-      <Button layoutX="274.0" layoutY="260.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="90.0" styleClass="buttonDark" text="SEGUIR" />
-      <DatePicker fx:id="dpDataNascimento" layoutX="220.0" layoutY="205.0" prefHeight="26.0" prefWidth="202.0" promptText="Data de Nascimento" />
+      <Button fx:id="btnSeguir" layoutX="339.0" layoutY="260.0" mnemonicParsing="false" onAction="#atualizarConta" prefHeight="46.0" prefWidth="90.0" styleClass="buttonDark" text="SEGUIR" />
+      <DatePicker fx:id="dpDataNascimento" layoutX="220.0" layoutY="205.0" prefHeight="26.0" prefWidth="202.0" promptText="dd/mm/aaaa" />
+      <Button fx:id="btnVoltar" layoutX="210.0" layoutY="260.0" mnemonicParsing="false" onAction="#voltar" prefHeight="46.0" prefWidth="90.0" styleClass="buttonDark" text="VOLTAR" />
+      <Label fx:id="lblErro" layoutX="220.0" layoutY="231.0" textFill="RED" />
    </children>
 </AnchorPane>

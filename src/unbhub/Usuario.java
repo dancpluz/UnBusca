@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 public class Usuario implements Serializable{
     private String nome, senha, username, cpf;
-    private int id;
+    private final int id;
     
     //Lista com todas as avaliações realizadas pelo usuario
     private ArrayList<Avaliacao> avaliacoes = new ArrayList();
@@ -35,7 +35,7 @@ public class Usuario implements Serializable{
         return username;
     }
     
-    public String getCPF() {
+    public String getCpf() {
         return cpf;
     }
     
@@ -51,12 +51,16 @@ public class Usuario implements Serializable{
         this.senha = senha;
     }
     
+    public String getSenha(){
+        return senha;
+    }
+    
     public void setUsername(String user) {
         this.username = user;
     }
     
-    public void adicionarAvaliacao(int nota, String comentario, String idLoja) {
-        avaliacoes.add(new Avaliacao(nota, comentario, id, idLoja, LocalDate.now()));
+    public void adicionarAvaliacao(int nota, String comentario, Loja loja) {
+        avaliacoes.add(new Avaliacao(nota, comentario, this, loja, LocalDate.now()));
     }
     
     public ArrayList<Avaliacao> getAvaliacoes() {

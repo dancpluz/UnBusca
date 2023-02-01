@@ -12,24 +12,30 @@ import java.time.format.DateTimeFormatter;
  * @author Daniel
  */
 public class Avaliacao {
-    private int nota, idUsuario;
-    private String comentario, idLoja;
+    private Loja loja;
+    private Usuario user;
+    private int nota;
+    private String comentario;
     private LocalDate data;
 
     public Avaliacao() {
     }
 
-    public Avaliacao(int nota, String comentario, int idU, String idL, LocalDate d) {
+    public Avaliacao(int nota, String comentario, Usuario u, Loja l, LocalDate d) {
         this.nota = nota;
         this.comentario = comentario;
-        idUsuario = idU;
-        idLoja = idL;
+        loja = l;
+        user = u;
         data = d;
     }
     
     public int getNota() {
         return nota;
     }
+        
+    public String getMencao() {
+        return (new String[]{"II", "MI", "MM", "MS", "SS"})[nota];
+    }   
 
     public void setNota(int nota) {
         this.nota = nota;
@@ -43,16 +49,23 @@ public class Avaliacao {
         this.comentario = comentario;
     }
     
-    public int getIdUsuario() {
-        return idUsuario;
+    public Usuario getUsuario() {
+        return user;
     }
     
-    public String getIdLoja() {
-        return idLoja;
+    public Loja getLoja() {
+        return loja;
+    }
+    
+    public void setLoja(Loja l) {
+        loja = l;
     }
     
     public String getDataString() {
         return data.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
     }
     
+    public LocalDate getData() {
+        return data;
+    }
 }

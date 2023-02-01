@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="360.0" prefWidth="640.0" style="-fx-background-color: #004E64;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleCliente">
+<AnchorPane id="AnchorPane" prefHeight="360.0" prefWidth="640.0" style="-fx-background-color: #004E64;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleEditarPerfil">
    <children>
       <Button fx:id="btnMudar" alignment="CENTER" layoutX="39.0" layoutY="141.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="123.0" styleClass="buttonUI" text="Mudar Imagem" />
       <Button fx:id="btnSalvar" layoutX="201.0" layoutY="300.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="160.0" styleClass="buttonUI" text="Salvar Alterações" />
@@ -39,7 +39,7 @@
       </ImageView>
       <Circle fx:id="cirAvatar" fill="DODGERBLUE" layoutX="101.0" layoutY="77.0" radius="41.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
       <Button fx:id="btnSair" alignment="CENTER" layoutX="561.0" layoutY="15.0" mnemonicParsing="false" onAction="#close" prefHeight="40.0" prefWidth="53.0" styleClass="buttonX" text="X" textFill="#7ae582" />
-      <Button fx:id="btnVoltar" layoutX="39.0" layoutY="301.0" mnemonicParsing="false" onAction="#voltarCliente" prefHeight="28.0" prefWidth="94.0" styleClass="buttonBack" text="VOLTAR" textFill="#7ae582">
+      <Button fx:id="btnVoltar" layoutX="39.0" layoutY="301.0" mnemonicParsing="false" onAction="#voltarPerfil" prefHeight="28.0" prefWidth="94.0" styleClass="buttonBack" text="VOLTAR" textFill="#7ae582">
          <graphic>
             <ImageView fitHeight="15.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                <image>
