@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 public class Loja {
-    private int nota_media; 
-    private HashSet<String> categorias;
+    private double nota_media; 
     private String nome, horario_funcionamento, local, id_loja, pop_up, rede_social, opcoes_pagamento; /* Criar classe para local e talvez opcoes de pagamento */
     private Dono dono;
     

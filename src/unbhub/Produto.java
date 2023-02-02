@@ -2,16 +2,17 @@ package unbhub;
 
 public class Produto {
     private String nomeImagem;
-    private String nome_produto, categoria;
-    private float preço;
-    private boolean disponibilidade;
+    private String nome_produto;
+    private double preco;
     
-    public Produto(String id_produto, String nome_produto, float preço, String c){
+    public Produto(String id_produto, String nome_produto, double preço){
         this.nomeImagem = id_produto;
         this.nome_produto = nome_produto;
-        this.preço = preço;
-        this.disponibilidade = disponibilidade;
-        categoria = c;
+        this.preco = preço;
+    }
+    
+    public void setNome(String s) {
+        nome_produto = s;
     }
     
     public String getIdProduto(){
@@ -22,11 +23,12 @@ public class Produto {
         return nome_produto;
     }
     
-    public float getPreço(){
-        return preço;
+    public double getPreco(){
+        return preco;
     }
-    
-    public boolean isDisponivel(){
-        return disponibilidade;
+   
+        
+    public void setPreco(double d) {
+        preco = d;
     }
 }

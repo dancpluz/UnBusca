@@ -9,12 +9,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="360.0" prefWidth="640.0" style="-fx-background-color: #004E64;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleDono">
+<AnchorPane id="AnchorPane" prefHeight="360.0" prefWidth="640.0" style="-fx-background-color: #004E64;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleEditarLoja">
    <children>
       <Button fx:id="btnMudar" alignment="CENTER" layoutX="39.0" layoutY="141.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="123.0" styleClass="buttonUI" text="Mudar Imagem" />
-      <Button fx:id="btnSalvar" layoutX="408.0" layoutY="300.0" mnemonicParsing="false" onAction="#salvarAlteracoes" prefHeight="30.0" prefWidth="138.0" styleClass="buttonUI" text="Adicionar" />
+      <Button fx:id="btnSalvar" layoutX="408.0" layoutY="300.0" mnemonicParsing="false" onAction="#salvarAlteracoes" prefHeight="30.0" prefWidth="138.0" styleClass="buttonUI" text="Salvar" />
       <TextField fx:id="txtNome" layoutX="201.0" layoutY="61.0" prefHeight="23.0" prefWidth="158.0" promptText="Nome" />
-      <Label fx:id="lblTitulo" layoutX="200.0" layoutY="31.0" text="Crie sua Loja" textFill="#f7f7ff">
+      <Label fx:id="lblTitulo" layoutX="200.0" layoutY="31.0" text="Editar loja" textFill="#f7f7ff">
          <font>
             <Font size="20.0" />
          </font>
@@ -33,7 +33,7 @@
          </image>
       </ImageView>
       <Button fx:id="btnSair" alignment="CENTER" layoutX="561.0" layoutY="15.0" mnemonicParsing="false" onAction="#close" prefHeight="40.0" prefWidth="53.0" styleClass="buttonX" text="X" textFill="#7ae582" />
-      <Button fx:id="btnVoltar" layoutX="39.0" layoutY="301.0" mnemonicParsing="false" onAction="#voltarTelaAdicionarLoja" prefHeight="28.0" prefWidth="94.0" styleClass="buttonBack" text="VOLTAR" textFill="#7ae582">
+      <Button fx:id="btnVoltar" layoutX="39.0" layoutY="301.0" mnemonicParsing="false" onAction="#voltar" prefHeight="28.0" prefWidth="94.0" styleClass="buttonBack" text="VOLTAR" textFill="#7ae582">
          <graphic>
             <ImageView fitHeight="15.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -44,5 +44,6 @@
       </Button>
       <TextArea fx:id="txtText" layoutX="200.0" layoutY="219.0" prefHeight="74.0" prefWidth="346.0" />
       <TextField fx:id="txtMetodo" layoutX="200.0" layoutY="141.0" prefHeight="23.0" prefWidth="158.0" promptText="Métodos de pagamento" />
+      <Label fx:id="lblErro" layoutX="408.0" layoutY="330.0" textFill="RED" />
    </children>
 </AnchorPane>

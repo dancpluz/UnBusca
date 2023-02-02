@@ -3,20 +3,18 @@ package controle;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.paint.ImagePattern;
-import javafx.scene.shape.Circle;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import unbhub.Loja;
 import unbhub.Principal;
-import unbhub.Usuario;
+import unbhub.Produto;
 import unbhub.util.Tela;
 
 
@@ -25,11 +23,11 @@ public class ControleLojaDono implements Initializable {
     private Loja loja;
     
     @FXML
-    private Circle cirAvatar;
-    @FXML
     private Label lblMencao, lblNomeLoja;
     @FXML
     private BarChart bcGrafico;
+    @FXML
+    private VBox vboxProdutos;
     
        
     
@@ -66,8 +64,8 @@ public class ControleLojaDono implements Initializable {
 
     
     
-    public void adicionarLoja() throws IOException {
-        Tela.abrirTela("/telas/TelaAdicionarLoja.fxml");
+    public void adicionarProduto() throws IOException {
+        ((ControleAdicionarProduto)Tela.abrirTela("/telas/TelaAdicionarProduto.fxml").getController()).setData(loja);
     }
     
     
@@ -75,9 +73,6 @@ public class ControleLojaDono implements Initializable {
         ((ControleAvaliacoesLoja)Tela.abrirTela("/telas/TelaAvaliacoesLoja.fxml").getController()).setData(loja);
     }
     
-    public void editarPerfil() throws IOException {
-        Tela.abrirTela("/telas/TelaEditarPerfil.fxml");
-    }
     
             
     public void voltar() throws IOException {
@@ -86,7 +81,25 @@ public class ControleLojaDono implements Initializable {
     
     
     public void carregarMeusProdutos() {
+        for(Produto p : loja.getListaProdutos()) {
+            FXMLLoader fxmll = Tela.telaFxmlLoader("/itens/ItemProdutoDono.fxml");
+            try {
+                HBox hbox = fxmll.load();
+                ControleItemProdutoDono c = fxmll.getController();
+                c.setData(loja, this, p);
+                vboxProdutos.getChildren().add(hbox);
+            } catch (IOException e) {}     
+        }
+    }
     
+    
+    public void editarLoja() throws IOException {
+        
+        ControleEditarLoja controle;
+        FXMLLoader fmxlloader = Tela.abrirTela("/telas/TelaEditarLoja");
+        controle = fmxlloader.getController();
+        controle.setLoja(loja);
+        //((ControleEditarLoja)Tela.abrirTela("/telas/TelaEditarLoja.fxml").getController()).setLoja(loja);
     }
     
     
@@ -108,16 +121,7 @@ public class ControleLojaDono implements Initializable {
         
     @Override
     public void initialize(URL url, ResourceBundle rb) {   
-        Usuario user = Principal.usuarioLogado;
-        cirAvatar.setFill(new ImagePattern(new Image("/imagens/Avatar.png")));
-        
-        //Carrega foto de perfil
-        File foto = new File(String.format("data/imagens/%d.png", user.getId()));     
-        
-        if (foto.isFile()) {  
-            cirAvatar.setFill(new ImagePattern(new Image(foto.toURI().toString())));
-        }
-        
+ 
         
     }    
 }

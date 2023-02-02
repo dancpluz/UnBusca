@@ -10,15 +10,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
-import javafx.stage.Stage;
 import unbhub.Dono;
 import unbhub.Loja;
 import unbhub.Principal;
@@ -28,7 +23,7 @@ import unbhub.util.Tela;
 
 public class ControleDono implements Initializable {
     
-    private Loja lojaSelecionada;
+    private Loja lojaSelecionada = null;
     
     @FXML
     private Circle cirAvatar;
@@ -60,7 +55,9 @@ public class ControleDono implements Initializable {
  
     
     public void visualizarLoja() throws IOException{
-        ((ControleLojaDono)Tela.abrirTela("/telas/TelaLojaDono.fxml").getController()).setLoja(lojaSelecionada);   
+        //if (lojaSelecionada == null) {
+            ((ControleLojaDono)Tela.abrirTela("/telas/TelaLojaDono.fxml").getController()).setLoja(lojaSelecionada);  
+        //}       
     }
     
     

@@ -27,10 +27,10 @@ public class ControleItemLojaDono implements Initializable {
     
     //Carrega os dados da loja no card
     public void setData(Loja l, ControleDono ctrl) {
-        lblNome.setText(l.getNome());
-        lblNotaMedia.setText(l.getMencao());
-        lblLocal.setText(l.getLocal());
-        lblHorario.setText(l.getHorarioFuncionamento());
+        lblNome.setText("Nome: "+l.getNome());
+        lblNotaMedia.setText("Menção: "+l.getMencao());
+        lblLocal.setText("Local: " + l.getLocal());
+        lblHorario.setText("Horário: "+l.getHorarioFuncionamento());
         
         File foto = new File(String.format("data/imagens/%s.png", l.getIdLoja()));     
         

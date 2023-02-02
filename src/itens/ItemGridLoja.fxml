@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="90.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.IdLojaController">
+   <children>
+      <Button fx:id="bttVisualizar" layoutX="308.0" layoutY="57.0" mnemonicParsing="false" onAction="#entrarLoja" prefHeight="21.0" prefWidth="66.0" styleClass="buttonBack" text="Visualizar" textFill="#7ae582">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblAvaliacao" alignment="CENTER" layoutX="339.0" layoutY="12.0" prefHeight="41.0" prefWidth="34.0" text="SR" textFill="#004e64">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Circle fill="#1f93ff00" layoutX="357.0" layoutY="33.0" radius="17.0" stroke="#7ae582" strokeType="INSIDE" strokeWidth="2.0" />
+      <VBox layoutX="102.0" prefHeight="90.0" prefWidth="192.0">
+         <children>
+            <Label fx:id="lblLoja" prefHeight="32.0" prefWidth="176.0" text="Loja" textFill="#004e64">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblRedeSocial" prefHeight="24.0" prefWidth="191.0" text="Rede Social" textFill="#004e64">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblLocal" prefHeight="22.0" prefWidth="190.0" text="Local" textFill="#004e64">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="-1.0" layoutY="1.0" prefHeight="90.0" prefWidth="97.0">
+         <padding>
+            <Insets left="25.0" top="20.0" />
+         </padding>
+         <children>
+            <Circle fx:id="circulo" fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Circle>
+         </children>
+      </VBox>
+   </children>
+</Pane>
