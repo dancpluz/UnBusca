@@ -40,9 +40,9 @@ The name was inspired by mixing two words "UnB" the university of Brasília abbr
 
 ## 👥 Group
 
-- **Daniel:** Branding, UI interface design, and report
-- **Bernardo:** Most frontend functions and backend
-- **Heitor:** Client frontend
+- **[Daniel](https://github.com/dancpluz):** Branding, UI interface design, and report
+- **[Bernardo](https://github.com/BernardoRabello):** Most frontend functions and backend
+- **[Heitor](https://github.com/HgrassM):** Client frontend
 
 ## 🤝 Contributions 
 
