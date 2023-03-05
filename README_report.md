@@ -100,31 +100,3 @@ programa que gera e edita os arquivos FXML, no qual possui os elementos e atribu
 ![image](https://user-images.githubusercontent.com/64702639/221651425-c2472c3c-2429-480f-ab66-c52d14833bcb.png)
 ![telaMinhasAvaliacoes](https://user-images.githubusercontent.com/64702639/221651203-1a85143d-62ce-4b47-a97e-fc356a9557a2.jpg)
 ![telaAdicionarLoja](https://user-images.githubusercontent.com/64702639/221651226-687a56d8-1d80-4439-a587-31fb3b257b25.jpg)
-
-> ### Frontend
-
-- [X] Tela de Cadastro
-- [X] Tela de Login
-- [X] Tela de Entrada
-- [X] Tela de CompletarCadastro
-- [X] Tela de Cliente
-- [X] Tela de Avaliações
-- [X] Tela de Dono
-- [X] Tela da Loja
-- [X] Tela de Criar/Editar Lojas
-- [X] Tela de Criar/Editar Produtos
-- [X] Tela de Criar/Editar Avaliações
-- [X] Tela de Editar Perfil
-
-> ### Backend
-- [X] Criação de usuário
-- [X] Verificação de usuário
-- [ ] Criação de perfil de dono
-- [ ] Editar perfil
-- [X] Banco de dados
-- [ ] Criação de lojas
-- [ ] Criação de avaliações
-- [ ] Mecanismo de busca
-- [ ] Formatação dos campos de entrada
-
-
