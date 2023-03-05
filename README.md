@@ -8,7 +8,9 @@
   <img src="https://user-images.githubusercontent.com/64702639/222981595-83f8a449-1f57-40d5-b45c-4cf53e39973f.gif" align="right" width="55%"/>
 </picture>
 
-Fun project developed as a group for the final project of the "Técnicas de Programação 1" (Programming Techniques 1) college subject, in which we learned about object-oriented programming, interfaces, inheritance, abstraction, and polymorphism. For the project, we had the choice of using Swing or JavaFX, so we chose JavaFX because of the CSS support and more recent features. We used Apache NetBeans 15 as the text editor and builder, Gluon Scene Builder to make the interfaces, Java 8, and JavaFX 19. We also made a report describing the project with more details, available only in Portuguese [here](report.pdf).
+Fun project developed as a group for the final project of the "Técnicas de Programação 1" (Programming Techniques 1) college subject, in which we learned about object-oriented programming, interfaces, inheritance, abstraction, and polymorphism. For the project, we had the choice of using Swing or JavaFX, so we chose JavaFX because of the CSS support and more recent features. We used Apache NetBeans 15 as the text editor and builder, Gluon Scene Builder to make the interfaces, Java 8, and JavaFX 19.
+
+We also made a report describing the project with more details, available only in Portuguese [here](report.pdf).
 
 ## 🚀 Objective
 
