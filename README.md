@@ -42,6 +42,10 @@ The name was inspired by mixing two words "UnB" the university of Brasília abbr
 - **Bernardo:** Most frontend functions and backend
 - **Heitor:** Client frontend
 
+## 🛠 Built With
+
+<picture>![Java]</picture><picture>![CSS]</picture>
+
 <details>
   <summary><h2>⚠ WIP</h2></summary>
   
@@ -79,3 +83,6 @@ The project is missing some features that we have not implemented yet, it's stil
 - [ ] Language support
 
  </details>
+
+[CSS]: https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white
+[Java]: https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white
