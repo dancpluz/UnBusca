@@ -38,11 +38,15 @@ The application consists of finding products and ranking establishments inside t
 
 The name was inspired by mixing two words "UnB" the university of Brasília abbreviation, and "Busca" which means "search", a straightforward concept to show that is an app to search for something from the university. Made a really nice logo in Adobe Illustrator with the name and two graphic elements, the star in the "U" letter to remind of the rating system, and the search bar, which shows the main purpose of the app. Using a simple pallette that consists of three colors, we followed basic UI concepts to design.
 
-## 🤝 Contributions 
+## 👥 Group
 
 - **Daniel:** Branding, UI interface design, and report
 - **Bernardo:** Most frontend functions and backend
 - **Heitor:** Client frontend
+
+## 🤝 Contributions 
+
+- **Profa. Roberta Barbosa:** Teacher that oriented us and proposed the project
 
 ## 🛠 Built With
 
