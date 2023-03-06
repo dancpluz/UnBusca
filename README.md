@@ -1,6 +1,5 @@
-<a href="report.pdf">
-  <img src="https://user-images.githubusercontent.com/64702639/221646701-66a33e4f-07b9-4e4f-b1c0-b686697b5080.png" width="500"/>
-</a>
+<img src="https://user-images.githubusercontent.com/64702639/221646701-66a33e4f-07b9-4e4f-b1c0-b686697b5080.png#gh-dark-mode-only" width="500"/>
+<img src="https://user-images.githubusercontent.com/64702639/222993884-b492b763-ecec-4cb8-9540-7c6752f227cc.png#gh-light-mode-only" width="500"/>
 
 # 📚 About
 
